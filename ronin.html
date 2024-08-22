@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RONIN</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="ronin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navigation-bar">
+        <div class="company-name">
+            <h2>Ride-O-Holic</h2>
+        </div>
+        <ul class="nav-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+        <a href="#">Bikes</a>
+        <ul class="dropdown-content">
+          <li><a href="royalenfeild.html">Royal Enfeild</a></li>
+          <li><a href="TVS.html">TVS</a></li>
+          <li><a href="yamaha.html">Yamaha</a></li>
+          <li><a href="Hero.html">Hero</a></li>
+          <li><a href="Bajaj.html">Bajaj</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="accesories.html">Accessories</a>
+      </li>
+      <li class="dropdown">
+        <a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="partnerships.html">Partnership</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+             
+            <li class="dropdown">
+                <a href="#">Login</a>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="heading-container">
+        <h2>MOTORCYCLES > <span class="classic-heading">RONIN</span></h2>
+    </div>
+
+    <div class="container">
+        <div class="single-product">
+            <div class="row">
+                <div class="col-6">
+                    <div class="product-image">
+                        <div class="product-image-main">
+                            <img src="Ronin/ronin-225-right-front-three-quarter.png" alt="" id="product-main-image">
+                        </div>
+                        <div class="product-image-slider">
+                            <img src="Ronin/ronin-225-right-front-three-quarter.png" alt="" class="image-list">
+                            <img src="Ronin/tvs-select-model-galactic-grey-1657171920806.png" alt="" class="image-list">
+                            <img src="Ronin/tvs-select-model-delta-blue-1657171906935.png" alt="" class="image-list">
+                            <img src="Ronin/tvs-select-model-magma-red-1657171885572.png" alt="" class="image-list">
+                            <img src="Ronin/tvs-select-model-dawn-orange-1657172147612.png" alt="" class="image-list">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="product">
+                        <div class="product-title">
+                            <h2>TVS Ronin</h2>
+                        </div>
+                        <div class="product-rating">
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span class="review">( 88 Reviews )</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="offer-price">₹ 1,73,750</span>
+                            <span class="sale-price">On-Road Price</span>
+                        </div>
+
+                        <div class="product-details">
+                            <h3>Description</h3>
+                            <p>TVS Ronin is a motorcycle with a starting price of Rs 1.49 Lakh. It is available in India
+                                in 3 variants and 6 colours with high end variant price starting from Rs 1.69 Lakh.
+                                Ronin is powered by a 225.9 ccbs6 engine which develops a power of 20.4 PS and a torque
+                                of 19.93 Nm. It has Disc front brakes and Disc rear brakes. The weight of TVS Ronin is
+                                160 kg and comes with a fuel tank capacity of 14 L.
+                                The TVS Ronin is the Hosur-based bike maker's first attempt at creating a motorcycle
+                                that’s a mix of retro, cruiser and roadster genres.</p>
+                        </div>
+
+                        <div class="product-color">
+                            <h4>Color</h4>
+                            <div class="color-layout">
+                                <div class="color-layout">
+                                    <input type="radio" id="blue" name="color" value="blue" class="color-input"
+                                        onclick="changeMainImage('blue')">
+                                    <label for="blue" class="blue"></label>
+
+                                    <input type="radio" id="white" name="color" value="white" class="color-input"
+                                        onclick="changeMainImage('white')">
+                                    <label for="white" class="white"></label>
+
+                                    <input type="radio" id="red" name="color" value="red" class="color-input"
+                                        onclick="changeMainImage('red')">
+                                    <label for="red" class="red"></label>
+
+                                    <input type="radio" id="gray" name="color" value="gray" class="color-input"
+                                        onclick="changeMainImage('gray')">
+                                    <label for="gray" class="gray"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="divider"></span>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Script -->
+    <script>
+        const sliderMainImage = document.getElementById("product-main-image"); // product container image
+        const sliderImageList = document.getElementsByClassName("image-list"); // image thumbnail group selection
+        const colorInputs = document.getElementsByClassName("color-input"); // color input buttons
+
+        for (let i = 0; i < sliderImageList.length; i++) {
+            sliderImageList[i].onclick = function () {
+                sliderMainImage.src = sliderImageList[i].src;
+                console.log(sliderMainImage.src);
+            };
+        }
+
+        for (let i = 0; i < colorInputs.length; i++) {
+            colorInputs[i].onclick = function () {
+                const color = colorInputs[i].value;
+                switch (color) {
+                    case "blue":
+                        sliderMainImage.src = "Ronin/tvs-select-model-galactic-grey-1657171920806.png";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "white":
+                        sliderMainImage.src = "Ronin/tvs-select-model-delta-blue-1657171906935.png";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "red":
+                        sliderMainImage.src = "Ronin/tvs-select-model-magma-red-1657171885572.png";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "gray":
+                        sliderMainImage.src = "Ronin/tvs-select-model-dawn-orange-1657172147612.png";
+                        console.log(sliderMainImage.src);
+                        break;
+                    default:
+                        break;
+                }
+            };
+        }
+    </script>
+    <style>
+        table {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        table,
+        th,
+        td {
+            border: 3px solid white;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            text-align: center;
+            background-color: rgb(30, 30, 30);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: black;
+        }
+    </style>
+    </head>
+
+    <body>
+
+         <div class="re-buttons">
+            <div class="icon-button" onclick="window.location.href='bookatestride.html';">
+                <i class="fa fa-motorcycle"></i>
+                <span>Book a Ride</span>
+            </div>
+            <div class="icon-button" onclick="window.location.href='bookaservice.html';">
+                <a> <i class="fa fa-gears"></i>
+                    <span>Book a Service</span></a>
+
+            </div>
+        </div>
+
+        <h2 style="text-align: center;">Ronin Key Highlights</h2><br>
+
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Specification</th>
+            </tr>
+            <tr>
+                <td>Engine Capacity</td>
+                <td>225.9 cc</td>
+            </tr>
+            <tr>
+                <td>Mileage - ARAI</td>
+                <td>42 kmpl</td>
+            </tr>
+            <tr>
+                <td>Transmission</td>
+                <td>5 Speed Manual</td>
+            </tr>
+            <tr>
+                <td>Kerb Weight</td>
+                <td>159 kg</td>
+            </tr>
+            <tr>
+                <td>Fuel Tank Capacity</td>
+                <td>14 litres</td>
+            </tr>
+            <tr>
+                <td>Seat Height</td>
+                <td>795 mm</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            p {
+                text-align: left;
+            }
+        </style>
+        </head>
+
+        <h2 style="text-align: left;">TVS Ronin Summary</h2>
+        <br>
+        <br>
+
+        <p>TVS Ronin is a cruiser bike available in 4 variants and 7 colours. Ronin price starts at Rs. 1,73,750 in
+            India with top variant price starting from Rs. 1,99,932. The TVS Ronin is powered by 225.9cc BS6 engine
+            which develops a power of 20.1 bhp and a torque of 19.93 Nm. With both front and rear disc brakes, TVS Ronin
+            comes up with anti-locking braking system. This Ronin bike weighs 159 kg and has a fuel tank capacity of 14
+            liters.<br><br>
+
+            The new Ronin 225 is TVS Motor Company’s first ever neo-retro scrambler-style motorcycle. It is offered in
+            three variants and they are differentiated by their colour schemes.<br><br>
+
+            Buyers can opt between single-tone, dual-tone, and triple-tone versions. The single-tone variant is offered
+            in Magma Red and Lightning Black colours. The dual-tone versions feature Delta Blue and Stargaze Black paint
+            options. Lastly, the Triple tone variant is available in two colour schemes – Galactic Grey and Dawn Orange.<br><br>
+
+            The feature list on TVS Ronin includes full-LED lighting, an asymmetrically-mounted LCD instrument cluster
+            with TVS SmartXonnect Bluetooth module, two ABS modes – Rain and Road, slipper clutch, and the Glide Through
+            Technology. Meanwhile, the styling cues comprise a round headlight, a curvy fuel tank, a single-piece seat,
+            an engine cowl, alloy wheels, and a side-slung exhaust.<br><br>
+
+            The mechanical specifications include a 225cc single-cylinder, the oil-cooled motor that makes 20.1bhp at
+            7,750rpm and 19.93Nm of peak torque at 3,750rpm. The engine is linked to a five-speed gearbox. The hardware
+            comprises upside-down front forks, a seven-step preload-adjustable monoshock, a 300mm disc at the front, and
+            a 240mm rotor at the back.<br><br>
+
+            The Ronin 225 rivals the likes of the Honda CB350 RS in the Indian market.<br><br>
+
+        </p>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!--footer -->
+        <div class="footer">
+            <div class="footer-section">
+                <h2>Why Choose Us?</h2>
+                <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and esteemed
+                    bike
+                    dealers, simplifying the process of acquiring a new bike. With an extensive range of bike choices
+                    and
+                    personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping experience.
+                    <br>The
+                    platform's user-friendly interface provides comprehensive details, expert insights, and secure
+                    transactions.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+                    <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+                    <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+                    <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+                    <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+                    <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+                    <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+                    <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Contact Us</h2>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <hr style="color: white;">
+        <p style="color: white;" style="font-size: xx-small">@Ride-O-Holic. T&C applied. Made By Kunj, Naman, Snigdh,
+            Varenyam</p>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!--navigation bar-->
+    <nav class="navigation-bar">
+        <div class="company-name">
+            <h2>Ride-O-Holic</h2>
+        </div>
+        <ul class="nav-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Bikes</a>
+                <ul class="dropdown-content">
+                    <li><a href="royalenfeild.html">Royal Enfield</a></li>
+                    <li><a href="TVS.html">TVS</a></li>
+                    <li><a href="yamaha.html">Yamaha</a></li>
+                    <li><a href="Hero.html">Hero</a></li>
+                    <li><a href="Bajaj.html">Bajaj</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="accesories.html">Accessories</a>
+              </li>
+              <li class="dropdown">
+                <a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="partnerships.html">Partnership</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+             
+            <li class="dropdown">
+                <a href="#">Login</a>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="re-motorcycles">
+        <h2 style="color: white; margin-left: 20px">Events</h2>
+        <button class="control-button" onclick="showSlide(1)">Ranthambore Motorcycle Tour</button>
+        <button class="control-button" onclick="showSlide(2)">Leh Ladakh Expedition From Delhi</button>
+        <button class="control-button" onclick="showSlide(3)">India Bike Week</button>
+        <button class="control-button" onclick="showSlide(4)">Suzuki Matsuri 2023</button>
+    </div>
+    <!--slideshow images-->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="Events/ranthambore-motorcycle-tour_1Crmx.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Events/ladakh.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Events/india bike week.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Events/suzuki matsuri.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+
+            function showSlide(slideNumber) {
+                showSlides(slideNumber);
+            }
+
+            // Updated showSlide function to link buttons to images
+            function showSlide(slideNumber) {
+                currentSlide(slideNumber);
+            }
+        </script>
+
+        <div class="royal-enfield">
+            <h1 style="left: auto;">MORE INFORMATION BELOW</h1>
+
+            <div class="faq">
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">RANTHAMBORE MOTORCYCLE TOUR</div>
+                        <div class="faq-answer"><br>Ranthambore National Park is a vast wildlife reserve near the town of
+                            Sawai Madhopur in Rajasthan, northern India. It is a former royal hunting ground and home to
+                            tigers, leopards and marsh crocodiles. Its landmarks include the imposing 10th-century
+                            Ranthambore Fort, on a hilltop, and the Ganesh Mandir temple Ranthambore (established-1980)
+                            in every case is unusual among the Indian reserves, with one and only reason, the presence
+                            of large number of Bengal tigers in the arena. It is the ideal destination to find a major
+                            tiger territory. If anybody knows Ranthambore it's all because of its existence as the
+                            Tigers' Paradise which was once the private hunting ground for the kings of Jaipur.<br><br>
+                            <h3>Date : 29 December to 1 January <br><br>
+                                Destination : DELHI - RANTHAMBORE - ABHANERI - DELHI<br><br>
+                                Duration : 4 Days / 3 Nights<br><br>
+                                Price : Rs. 27900</h3>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">LEH LADAKH BIKE EXPEDITION FROM DELHI</div>
+                        <div class="faq-answer"><br>With "Discover Activities, New Delhi", Drive all the way from Manali to
+                            Leh and discover one the of the challenging adventures of the World! Fulfill your dream of a
+                            lifetime, and be prepared to traverse through the most thrilling and adventurous routes of
+                            India. Ride through beautiful valleys of Himalayas, through the most thrilling routes of Leh
+                            and Laddakh. Begining from Delhi, traverse through amazing destinations like Manali, Jispa,
+                            Sarchu, Leh, and many more. Epereince biking among the highest motorable passes while
+                            enjoying panorama of snow-capped mountains, lakes, amazing experiences, and Buddhist
+                            culture.<br><br>
+                            <h3>Date : 7 January to 17 January<br><br>
+                                Destination : DELHI -BILASPUR - MANALI - SARCHU - LEH - NUBRA - PANGONG - LEH - JISPA - MANDI - DELHI<br><br>
+                                Duration : 11 Days / 10 Nights<br><br>
+                                Price : Rs. 57000</h3>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">INDIA BIKE WEEK</div>
+                        <div class="faq-answer"><br>India Bike Week 2023, one of the most significant motorcycling events in
+                            the country, is set to rev up the enthusiasm of bike enthusiasts and riders alike. Scheduled
+                            to take place in 2023, this mega two-wheeler extravaganza is a celebration of India's
+                            diverse motorcycle culture, attracting bikers from all corners of the nation. The event
+                            promises a thrilling amalgamation of live music, stunt shows, custom bike exhibitions, and
+                            an array of biking competitions. It provides a platform for bikers to showcase their passion
+                            and share their riding experiences, while also fostering a sense of community and
+                            camaraderie. India Bike Week 2023 is expected to draw a crowd of riders, enthusiasts, and
+                            industry leaders, making it an unmissable occasion for anyone with a love for motorcycles
+                            and a desire to be part of the vibrant Indian biking subculture.<br><br>
+                            <h3>Date : 8th - 9th December<br><br>
+                                Destination : Goa <br><br>
+                                Duration : 2 Days<br><br>
+                                Price : Rs. 2499 - 2999</h3>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">SUZUKI MATSURI</div>
+                        <div class="faq-answer"><br>Suzuki Matsuri 2023, also known as the Suzuki Festival, is a highly
+                            anticipated cultural and automotive event organized by Suzuki Motor Corporation. It is a
+                            grand celebration that combines the rich traditions of Japanese culture with the latest
+                            innovations in the world of automobiles. Scheduled for 2023, the festival offers a unique
+                            and immersive experience for attendees, featuring a showcase of Suzuki's cutting-edge
+                            vehicles, including motorcycles, cars, and even concept vehicles that provide a glimpse into
+                            the future of transportation. In addition to the automotive aspect, Suzuki Matsuri also
+                            highlights Japanese arts, crafts, and cuisine, giving visitors a taste of the country's
+                            heritage. The event typically includes live performances, traditional music, dance, and art
+                            exhibitions, creating a vibrant and diverse atmosphere. Suzuki Matsuri is an opportunity for
+                            enthusiasts and the general public to appreciate Suzuki's contributions to the automotive
+                            industry and experience the beauty of Japanese culture, all in one thrilling and culturally
+                            enriching festival. It's an occasion that blends modernity with tradition, making it a
+                            must-visit for automotive and cultural enthusiasts alike.<br><br>
+                            <H3>Date : 1st October<br><br>
+                                Destination : Delhi <br><br>
+                                Duration : 1 Day<br><br>
+                                Price : Rs. 499</H3>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const faqItems = document.querySelectorAll('.faq-item');
+
+                    faqItems.forEach(item => {
+                        const question = item.querySelector('.faq-question');
+
+                        question.addEventListener('click', () => {
+                            item.classList.toggle('open');
+                        });
+                    });
+                </script>
+                <hr />
+                <!--footer -->
+                <div class="footer">
+                    <div class="footer-section">
+                        <h2>Why Choose Us?
+                        </h2>
+                        <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and
+                            esteemed
+                            bike
+                            dealers, simplifying the process of acquiring a new bike. With an extensive range of bike
+                            choices
+                            and
+                            personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping
+                            experience.
+                            <br>The
+                            platform's user-friendly interface provides comprehensive details, expert insights, and
+                            secure
+                            transactions.
+                        </p>
+                    </div>
+                    <div class="footer-section">
+                        <h2>Quick Links</h2>
+                        <ul class="footer-list">
+                            <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+                            <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+                            <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+                            <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+                            <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+                            <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+                            <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+                            <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h2>Contact Us</h2>
+                        <ul class="footer-list">
+                            <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+                            <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <hr style="color: white;">
+                <p style="color: white;" style="font-size: smaller;">@Ride-O-Holic. T&C applied. Made By Kunj, Naman,
+                    Snigdh,
+                    Varenyam</p>
+
+
+</body>
+
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero</title>
+    <link rel="stylesheet" href="TVS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!--navigation bar-->
+    <nav class="navigation-bar">
+        <div class="company-name">
+            <h2>Ride-O-Holic</h2>
+        </div>
+        <ul class="nav-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+        <a href="#">Bikes</a>
+        <ul class="dropdown-content">
+          <li><a href="royalenfeild.html">Royal Enfeild</a></li>
+          <li><a href="TVS.html">TVS</a></li>
+          <li><a href="yamaha.html">Yamaha</a></li>
+          <li><a href="Hero.html">Hero</a></li>
+          <li><a href="Bajaj.html">Bajaj</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="accesories.html">Accessories</a>
+      </li>
+      <li class="dropdown">
+        <a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="partnerships.html">Partnership</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+             
+            <li class="dropdown">
+                <a href="#">Login</a>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="re-motorcycles">
+        <h2 style="color: white; margin-left: 20px">Motorcycles</h2>
+        <button class="control-button" onclick="showSlide(1)">X Pulse 200 4V</button>
+        <button class="control-button" onclick="showSlide(2)">Xtreme 200s 4V</button>
+        <button class="control-button" onclick="showSlide(3)">Glamour XT EC</button>
+        <button class="control-button" onclick="showSlide(4)">Splendor</button>
+        <button class="control-button" onclick="showSlide(5)">Passion Pro</button>
+    </div>
+    <!--slideshow images-->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="assets/XPULSE_200_4V.jpg" style="width:100%">
+                <div class="text">
+                    <button class="explore-button" onclick="window.location.href = 'xpulse.html';">Explore X Pulse 200 4V</button>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/XTREME_200S_4V.jpg" style="width:100%">
+                <div class="text">
+                    <button class="explore-button" onclick="window.location.href = 'xtreme400.html';">Explore Xtreme 200s 4V</button>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/GLAMOUR_XTEC.jpg" style="width:100%">
+                <div class="text">
+                    <button class="explore-button" onclick="window.location.href = 'glamour.html';">Explore Glamour XT EC</button>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/SPLENDOR.jpg" style="width:100%">
+                <div class="text">
+                    <button class="explore-button" onclick="window.location.href = 'splendor.html';">Explore Splendor</button>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/PASSION_PRO.jpg" style="width:100%">
+                <div class="text">
+                    <button class="explore-button" onclick="window.location.href = 'passion.html';">Explore Passion Pro</button>
+                </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+
+            function showSlide(slideNumber) {
+                showSlides(slideNumber);
+            }
+
+            // Updated showSlide function to link buttons to images
+            function showSlide(slideNumber) {
+                currentSlide(slideNumber);
+            }
+        </script>
+
+        <div class="royal-enfield">
+            <h1 style="left: auto;">Hero</h1>
+            <p>Hero MotoCorp Ltd, formerly known as Hero Honda, is the world's largest manufacturer of two-wheelers,
+                headquartered in New Delhi, India. Established in 1984, it is a key player in the Indian and global
+                motorcycle market.Hero MotoCorp is renowned for its wide range of motorcycles and scooters, designed to
+                cater to a broad spectrum of customers. They are known for producing fuel-efficient, reliable, and
+                affordable two-wheelers, which have made them extremely popular in India.</p>
+            <p>The company has a significant presence in the commuter bike segment and has produced many iconic
+                motorcycles over the years. Their commitment to innovation and technology is evident in the introduction
+                of products like the Hero Splendor, one of the best-selling motorcycles in the world.</p>
+            <p>Hero MotoCorp has also expanded its international footprint, exporting its vehicles to various countries.
+                The brand's focus on sustainability is apparent through their green manufacturing practices and electric
+                vehicle ventures, such as the Hero Electric brand. Hero MotoCorp's commitment to providing efficient,
+                cost-effective, and environmentally friendly mobility solutions has solidified its position as a leader
+                in the motorcycle industry, both in India and globally.</p>
+        </div>
+         <div class="re-buttons">
+            <div class="icon-button" onclick="window.location.href='bookatestride.html';">
+                <i class="fa fa-motorcycle"></i>
+                <span>Book a Ride</span>
+            </div>
+            <div class="icon-button" onclick="window.location.href='bookaservice.html';">
+                <a> <i class="fa fa-gears"></i>
+                    <span>Book a Service</span></a>
+
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="faq-container">
+                <h2>FREQUENTLY ASKED QUESTIONS</h2>
+                <div class="faq-item">
+                    <div class="faq-question">What is Hero MotoCorp and what does it manufacture?</div>
+                    <div class="faq-answer">Hero MotoCorp is the world's largest manufacturer of two-wheelers. It is an
+                        Indian multinational motorcycle and scooter manufacturer known for producing motorcycles and
+                        scooters that cater to a wide range of customers, from commuters to enthusiasts.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Where are Hero MotoCorp's manufacturing facilities located?</div>
+                    <div class="faq-answer">Hero MotoCorp has several manufacturing facilities in India. Their key
+                        plants are situated in places like Gurgaon, Dharuhera, Haridwar, Neemrana, and Halol. These
+                        plants are equipped to produce a variety of two-wheeler models.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What are some of the popular Hero MotoCorp motorcycle models?</div>
+                    <div class="faq-answer">Hero MotoCorp offers a diverse range of motorcycles, including popular
+                        models like the Hero Splendor, Hero Passion, Hero Xtreme, and Hero Glamour. These motorcycles
+                        are known for their reliability, fuel efficiency, and affordability.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is Hero MotoCorp involved in any corporate social responsibility (CSR)
+                        initiatives?</div>
+                    <div class="faq-answer">Yes, Hero MotoCorp is actively engaged in CSR initiatives. They focus on
+                        areas like education, healthcare, and community development. Their 'Hero We Care' program
+                        embodies their commitment to social responsibility and community welfare. Hero MotoCorp has been
+                        recognized for its efforts in promoting education and healthcare in various communities.
+                    </div>
+                </div>
+            </div>
+            <script>
+                const faqItems = document.querySelectorAll('.faq-item');
+
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question');
+
+                    question.addEventListener('click', () => {
+                        item.classList.toggle('open');
+                    });
+                });
+            </script>
+            <hr />
+            <!--footer -->
+            <div class="footer">
+                <div class="footer-section">
+                    <h2>Why Choose Us?
+                    </h2>
+                    <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and
+                        esteemed
+                        bike
+                        dealers, simplifying the process of acquiring a new bike. With an extensive range of bike
+                        choices
+                        and
+                        personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping
+                        experience.
+                        <br>The
+                        platform's user-friendly interface provides comprehensive details, expert insights, and secure
+                        transactions.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h2>Quick Links</h2>
+                    <ul class="footer-list">
+                        <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+                        <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+                        <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+                        <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+                        <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+                        <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+                        <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+                        <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h2>Contact Us</h2>
+                    <ul class="footer-list">
+                        <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+                        <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <hr style="color: white;">
+            <p style="color: white;" style="font-size: smaller;">@Ride-O-Holic. T&C applied. Made By Kunj, Naman,
+                Snigdh,
+                Varenyam</p>
+
+
+</body>
+
+</html>

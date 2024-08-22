@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+.checkmark {
+    width: 250px;
+    height: 250px;
+    background-color: transparent;
+    background-image: url('5289675.png'); /* Replace with the path to your image */
+    background-size: cover;
+    animation: zoomOut 1s ease-in-out; /* Add the zoom-out animation */
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.8); /* Adjust the scale value based on your preference */
+    }
+}
+
+.checkmark:after,
+.checkmark:before {
+    content: '';
+    width: 0;
+    height: 0;
+}
+h1 {
+    margin-top: 20px;
+    color: #ff0000; /* Set the color of "Thanks for Logging In" to red */
+    width: 100%;
+    text-align: center;
+}
+
+button {
+    margin-top: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    transition: background-color .3s, color .3s;
+}
+
+button:hover {
+    background-color: #ff0000; /* Change background color to red on hover */
+    color: #fff;
+}

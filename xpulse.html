@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xpulse 200</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="xpulse.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navigation-bar">
+        <div class="company-name">
+            <h2>Ride-O-Holic</h2>
+        </div>
+        <ul class="nav-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+        <a href="#">Bikes</a>
+        <ul class="dropdown-content">
+          <li><a href="royalenfeild.html">Royal Enfeild</a></li>
+          <li><a href="TVS.html">TVS</a></li>
+          <li><a href="yamaha.html">Yamaha</a></li>
+          <li><a href="Hero.html">Hero</a></li>
+          <li><a href="Bajaj.html">Bajaj</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="accesories.html">Accessories</a>
+      </li>
+      <li class="dropdown">
+        <a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="partnerships.html">Partnership</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+             
+            <li class="dropdown">
+                <a href="#">Login</a>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="heading-container">
+        <h2>MOTORCYCLES > <span class="classic-heading">XPULSE 200</span></h2>
+    </div>
+
+    <div class="container">
+        <div class="single-product">
+            <div class="row">
+                <div class="col-6">
+                    <div class="product-image">
+                        <div class="product-image-main">
+                            <img src="Xpulse/xpulse-200-4v-right-front-three-quarter.webp" alt=""
+                                id="product-main-image">
+                        </div>
+                        <div class="product-image-slider">
+                            <img src="Xpulse/xpulse-200-4v-right-front-three-quarter.webp" alt="" class="image-list">
+                            <img src="Xpulse/hero-select-model-black-sports-red-1684241138138.webp" alt=""
+                                class="image-list">
+                            <img src="Xpulse/hero-select-model-matte-nexus-blue-1684241181894.webp" alt=""
+                                class="image-list">
+                            <img src="Xpulse/hero-select-model-pro-white-1684317514734.webp" alt=""
+                                class="image-list">
+                            <img src="Xpulse/hero-select-model-techno-blue-1684317517524.webp" alt=""
+                                class="image-list">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="product">
+                        <div class="product-title">
+                            <h2>Hero Xpulse 200</h2>
+                        </div>
+                        <div class="product-rating">
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span class="review">( 211 Reviews )</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="offer-price">₹ 1,51,256</span>
+                            <span class="sale-price">On-Road Price</span>
+                        </div>
+
+                        <div class="product-details">
+                            <h3>Description</h3>
+                            <p>The Hero Xpulse 200 is a versatile and rugged adventure motorcycle designed for off-road
+                                enthusiasts and adventure seekers. It's powered by a 199.6cc single-cylinder engine that
+                                provides a good balance of power and efficiency, making it well-suited for a variety of
+                                terrains. With a compact and purposeful design, the Xpulse 200 features a high ground
+                                clearance, long-travel suspension, and spoked wheels with dual-purpose tires, all of
+                                which enable it to tackle challenging off-road conditions with ease.
+
+                                The bike offers a comfortable and upright riding position, making it ideal for
+                                long-distance journeys. It also includes features like a digital instrument cluster and
+                                smartphone connectivity for navigation. The Hero Xpulse 200 is a dependable and
+                                affordable choice for riders who crave adventure and exploration beyond paved roads.</p>
+                        </div>
+
+                        <div class="product-color">
+                            <h4>Color</h4>
+                            <div class="color-layout">
+                                <div class="color-layout">
+                                    <input type="radio" id="blue" name="color" value="blue" class="color-input"
+                                        onclick="changeMainImage('blue')">
+                                    <label for="blue" class="blue"></label>
+
+                                    <input type="radio" id="white" name="color" value="white" class="color-input"
+                                        onclick="changeMainImage('white')">
+                                    <label for="white" class="white"></label>
+
+                                    <input type="radio" id="red" name="color" value="red" class="color-input"
+                                        onclick="changeMainImage('red')">
+                                    <label for="red" class="red"></label>
+
+                                    <input type="radio" id="gray" name="color" value="gray" class="color-input"
+                                        onclick="changeMainImage('gray')">
+                                    <label for="gray" class="gray"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="divider"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Script -->
+    <script>
+        const sliderMainImage = document.getElementById("product-main-image"); // product container image
+        const sliderImageList = document.getElementsByClassName("image-list"); // image thumbnail group selection
+        const colorInputs = document.getElementsByClassName("color-input"); // color input buttons
+
+        for (let i = 0; i < sliderImageList.length; i++) {
+            sliderImageList[i].onclick = function () {
+                sliderMainImage.src = sliderImageList[i].src;
+                console.log(sliderMainImage.src);
+            };
+        }
+
+        for (let i = 0; i < colorInputs.length; i++) {
+            colorInputs[i].onclick = function () {
+                const color = colorInputs[i].value;
+                switch (color) {
+                    case "blue":
+                        sliderMainImage.src = "Xpulse/hero-select-model-black-sports-red-1684241138138.webp";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "white":
+                        sliderMainImage.src = "Xpulse/hero-select-model-matte-nexus-blue-1684241181894.webp";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "red":
+                        sliderMainImage.src = "Xpulse/hero-select-model-pro-white-1684317514734.webp";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "gray":
+                        sliderMainImage.src = "Xpulse/hero-select-model-techno-blue-1684317517524.webp";
+                        console.log(sliderMainImage.src);
+                        break;
+                    default:
+                        break;
+                }
+            };
+        }
+    </script>
+    <style>
+        table {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        table,
+        th,
+        td {
+            border: 3px solid white;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            text-align: center;
+            background-color: rgb(30, 30, 30);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: black;
+        }
+    </style>
+    </head>
+
+    <body>
+
+         <div class="re-buttons">
+            <div class="icon-button" onclick="window.location.href='bookatestride.html';">
+                <i class="fa fa-motorcycle"></i>
+                <span>Book a Ride</span>
+            </div>
+            <div class="icon-button" onclick="window.location.href='bookaservice.html';">
+                <a> <i class="fa fa-gears"></i>
+                    <span>Book a Service</span></a>
+
+            </div>
+        </div>
+
+        <h2 style="text-align: center;">Xpulse 200 Key Highlights</h2><br>
+
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Specification</th>
+            </tr>
+            <tr>
+                <td>Engine Capacity</td>
+                <td>199 cc</td>
+            </tr>
+            <tr>
+                <td>Mileage - ARAI</td>
+                <td>40 kmpl</td>
+            </tr>
+            <tr>
+                <td>Transmission</td>
+                <td>5 Speed Manual</td>
+            </tr>
+            <tr>
+                <td>Kerb Weight</td>
+                <td>153 kg</td>
+            </tr>
+            <tr>
+                <td>Fuel Tank Capacity</td>
+                <td>13 litres</td>
+            </tr>
+            <tr>
+                <td>Seat Height</td>
+                <td>823 mm</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            p {
+                text-align: left;
+            }
+        </style>
+        </head>
+
+        <h2 style="text-align: left;">Hero Xpulse 200 Summary</h2>
+        <br>
+        <br>
+
+        <p>After removing the Impulse from its product portfolio, Hero MotoCorp filled the void with the addition of a
+            higher displacement ADV motorcycle, the XPulse 200. Unlike the Impulse, the new XPulse is an adventure
+            tourer motorcycle. The company had first unveiled the motorcycle at the 2017 EICMA Show in Italy. The XPulse
+            200 carries forward the legacy of the Impulse, but it is more accessible and more purposeful. The motorcycle
+            has been updated to comply with the newest, more stringent emission norms.<br><br>
+
+            True to its adventurous nature, the XPulse 200 is equipped with spoke-wheels, high-rise front mudguard, fork
+            gaiters, bash plate, dual-purpose tyres and an upswept exhaust. The motorcycle rides on 21-inch front and
+            18-inch rear wheels. Suspension duties are carried out by telescopic units on the front with 190mm of travel
+            and 10-step adjustable mono-shock at the rear with 170mm of travel.<br><br>
+
+            The motorcycle has a seat height of 823mm and a high ground clearance of 220mm. For braking, the XPulse 200
+            employs disc brakes on both ends along with a single-channel ABS. On the tech front, the motorcycle
+            incorporates a full-LED headlamp and a digital instrument cluster complete with Bluetooth connectivity for
+            navigation and call alerts. It boasts of a 14-litre fuel tank capacity.<br><br>
+
+            Powering the XPulse 200 BS6 is a 199.6cc, single-cylinder engine that now features an oil-cooled setup
+            instead of the air-cooled layout on the BS4 model. The updated motor produces 17.8bhp of power at 8,500rpm
+            and 16.45Nm of torque at 6,500rpm. The engine is mated to a five-speed gearbox.<br><br>
+
+            Hero offers the XPulse 200 BS6 in a single variant with fuel-injection. The carburettor version has been
+            discontinued. In terms of colour options, the motorcycle is available in five colours – White, Matte Green,
+            Matte Grey, Sports Red and Panther Black.<br><br></p>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!--footer -->
+        <div class="footer">
+            <div class="footer-section">
+                <h2>Why Choose Us?</h2>
+                <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and esteemed
+                    bike
+                    dealers, simplifying the process of acquiring a new bike. With an extensive range of bike choices
+                    and
+                    personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping experience.
+                    <br>The
+                    platform's user-friendly interface provides comprehensive details, expert insights, and secure
+                    transactions.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+                    <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+                    <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+                    <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+                    <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+                    <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+                    <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+                    <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Contact Us</h2>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <hr style="color: white;">
+        <p style="color: white;" style="font-size: xx-small">@Ride-O-Holic. T&C applied. Made By Kunj, Naman, Snigdh,
+            Varenyam</p>
+
+
+    </body>
+
+</html>

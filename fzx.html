@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FZ X</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="fzx.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navigation-bar">
+        <div class="company-name">
+            <h2>Ride-O-Holic</h2>
+        </div>
+        <ul class="nav-buttons">
+            <li><a href="index.html">Home</a></li>
+              <li class="dropdown">
+        <a href="#">Bikes</a>
+        <ul class="dropdown-content">
+          <li><a href="royalenfeild.html">Royal Enfeild</a></li>
+          <li><a href="TVS.html">TVS</a></li>
+          <li><a href="yamaha.html">Yamaha</a></li>
+          <li><a href="Hero.html">Hero</a></li>
+          <li><a href="Bajaj.html">Bajaj</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="accesories.html">Accessories</a>
+      </li>
+      <li class="dropdown">
+        <a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="partnerships.html">Partnership</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+             
+            <li class="dropdown">
+                <a href="#">Login</a>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="heading-container">
+        <h2>MOTORCYCLES > <span class="classic-heading">FZ X</span></h2>
+    </div>
+
+    <div class="container">
+        <div class="single-product">
+            <div class="row">
+                <div class="col-6">
+                    <div class="product-image">
+                        <div class="product-image-main">
+                            <img src="FZX/fz-x-right-front-three-quarter-2.webp" alt="" id="product-main-image">
+                        </div>
+                        <div class="product-image-slider">
+                            <img src="FZX/fz-x-right-front-three-quarter-2.webp" alt="" class="image-list">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="product">
+                        <div class="product-title">
+                            <h2>Yamaha FZ X</h2>
+                        </div>
+                        <div class="product-rating">
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span class="review">( 66 Reviews )</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="offer-price">₹ 1,55,826</span>
+                            <span class="sale-price">On-Road Price</span>
+                        </div>
+
+                        <div class="product-details">
+                            <h3>Description</h3>
+                            <p>The Yamaha FZ-X is a versatile and stylish motorcycle that combines modern design with
+                                urban practicality. Powered by a 149cc single-cylinder engine, it offers a blend of
+                                power and efficiency suitable for daily commuting and leisurely rides. The FZ-X features
+                                an adventurous and rugged design with an upright riding stance, wide handlebars, and a
+                                high-mounted front fender, providing a distinct scrambler-style appearance.
+
+                                It incorporates modern features such as an LED headlight, a fully digital instrument
+                                console, and Bluetooth connectivity for smartphone integration. The motorcycle's
+                                comfortable saddle and suspension setup make it a comfortable choice for both city and
+                                light off-road use.
+
+                                The Yamaha FZ-X is designed for riders seeking a versatile and attractive motorcycle
+                                with a touch of adventure in a city-centric package, making it a unique and practical
+                                option in the 150cc segment.</p>
+                        </div>
+
+                        <div class="product-color">
+                            <h4>Color</h4>
+                            <div class="color-layout">
+                                <div class="color-layout">
+                                    <input type="radio" id="blue" name="color" value="blue" class="color-input"
+                                        onclick="changeMainImage('blue')">
+                                    <label for="blue" class="blue"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="divider"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Script -->
+    <script>
+        const sliderMainImage = document.getElementById("product-main-image"); // product container image
+        const sliderImageList = document.getElementsByClassName("image-list"); // image thumbnail group selection
+        const colorInputs = document.getElementsByClassName("color-input"); // color input buttons
+
+        for (let i = 0; i < sliderImageList.length; i++) {
+            sliderImageList[i].onclick = function () {
+                sliderMainImage.src = sliderImageList[i].src;
+                console.log(sliderMainImage.src);
+            };
+        }
+
+        for (let i = 0; i < colorInputs.length; i++) {
+            colorInputs[i].onclick = function () {
+                const color = colorInputs[i].value;
+                switch (color) {
+                    case "blue":
+                        sliderMainImage.src = "FZX/fz-x-right-front-three-quarter-2.webp";
+                        console.log(sliderMainImage.src);
+                        break;
+
+                    default:
+                        break;
+                }
+            };
+        }
+    </script>
+    <style>
+        table {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        table,
+        th,
+        td {
+            border: 3px solid white;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            text-align: center;
+            background-color: rgb(30, 30, 30);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: black;
+        }
+    </style>
+    </head>
+
+    <body>
+
+         <div class="re-buttons">
+            <div class="icon-button" onclick="window.location.href='bookatestride.html';">
+                <i class="fa fa-motorcycle"></i>
+                <span>Book a Ride</span>
+            </div>
+            <div class="icon-button" onclick="window.location.href='bookaservice.html';">
+                <a> <i class="fa fa-gears"></i>
+                    <span>Book a Service</span></a>
+
+            </div>
+        </div>
+
+        <h2 style="text-align: center;">FZ X Key Highlights</h2><br>
+
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Specification</th>
+            </tr>
+            <tr>
+                <td>Engine Capacity</td>
+                <td>149 cc</td>
+            </tr>
+            <tr>
+                <td>Mileage - ARAI</td>
+                <td>48 kmpl</td>
+            </tr>
+            <tr>
+                <td>Transmission</td>
+                <td>5 Speed Manual</td>
+            </tr>
+            <tr>
+                <td>Kerb Weight</td>
+                <td>139 kg</td>
+            </tr>
+            <tr>
+                <td>Fuel Tank Capacity</td>
+                <td>10 litres</td>
+            </tr>
+            <tr>
+                <td>Seat Height</td>
+                <td>810 mm</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            p {
+                text-align: left;
+            }
+        </style>
+        </head>
+
+        <h2 style="text-align: left;">Yamaha FZ X Summary</h2>
+        <br>
+        <br>
+
+        <p>Yamaha FZ X is a street bike available in only 1 variant and 1 colour. FZ X price starts at Rs. 1,55,826 in
+            India. The Yamaha FZ X is powered by 149cc BS6 engine which develops a power of 12.2 bhp and a torque of
+            13.3 Nm. With both front and rear disc brakes, Yamaha FZ X comes up with anti-locking braking system. This
+            FZ X bike weighs 139 kg and has a fuel tank capacity of 10 liters.<br><br>
+
+            The 2023 FZ-X continues to feature a neo-retro design that is inspired by the Yamaha XSR motorcycles. It
+            shares its chassis and base components with the FZ FI range. The new Yamaha FZ-X in one variant that is
+            available in three colours – Matte Copper, Matte Black, and a new Navy Blue colour with golden wheels.<br><br>
+
+            The styling cues include a round headlight at the front, a tall-set handlebar, an engine cowl, a step-up
+            seat with a tuck and roll pattern for the cover, and a basic grab rail at the back. The motorcycle gets
+            rugged dual-purpose tyres and fork gaiters that enhance the overall styling. The seat height is rated at
+            810mm while the kerb weight stands at 139kg. The feature list comprises an LED headlight with LED DRL, an
+            LCD instrument cluster, a USB charger, and a sleek LED taillight at the back. The 2023 model also features
+            LED indicators. Its safety net includes single-channel ABS and a side-stand engine cut-off function. It also
+            gets a traction control system like the FZ-S and R15 V4.<br><br>
+
+            The Bluetooth-enabled version works with Yamaha Y-Connect smartphone application and the display offers
+            information about calls, SMS and email notifications, and phone battery level. The smartphone application,
+            on the other hand, records details about fuel consumption, maintenance recommendation, last parked location,
+            malfunction notification, rev dashboard, and ranking (for distance travelled and fuel economy).<br><br>
+
+            The FZ-X shares its 149cc, single-cylinder, air-cooled engine with the FZ FI range. Linked to a five-speed
+            gearbox, the motor produces 12.2bhp of power at 7,250rpm and 13.3Nm of peak torque at 5,500rpm. The hardware
+            comprises 41mm telescopic front forks, a seven-step preload-adjustable rear mono-shock, disc brakes on both
+            wheels, and 17-inch alloy wheels.</p>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!--footer -->
+        <div class="footer">
+            <div class="footer-section">
+                <h2>Why Choose Us?</h2>
+                <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and esteemed
+                    bike
+                    dealers, simplifying the process of acquiring a new bike. With an extensive range of bike choices
+                    and
+                    personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping experience.
+                    <br>The
+                    platform's user-friendly interface provides comprehensive details, expert insights, and secure
+                    transactions.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+                    <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+                    <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+                    <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+                    <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+                    <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+                    <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+                    <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Contact Us</h2>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <hr style="color: white;">
+        <p style="color: white;" style="font-size: xx-small">@Ride-O-Holic. T&C applied. Made By Kunj, Naman, Snigdh,
+            Varenyam</p>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splendor</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="splendor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navigation-bar">
+        <div class="company-name">
+            <h2>Ride-O-Holic</h2>
+        </div>
+        <ul class="nav-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+        <a href="#">Bikes</a>
+        <ul class="dropdown-content">
+          <li><a href="royalenfeild.html">Royal Enfeild</a></li>
+          <li><a href="TVS.html">TVS</a></li>
+          <li><a href="yamaha.html">Yamaha</a></li>
+          <li><a href="Hero.html">Hero</a></li>
+          <li><a href="Bajaj.html">Bajaj</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="accesories.html">Accessories</a>
+      </li>
+      <li class="dropdown">
+        <a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="partnerships.html">Partnership</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+             
+            <li class="dropdown">
+                <a href="#">Login</a>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="heading-container">
+        <h2>MOTORCYCLES > <span class="classic-heading">SPLENDOR</span></h2>
+    </div>
+
+    <div class="container">
+        <div class="single-product">
+            <div class="row">
+                <div class="col-6">
+                    <div class="product-image">
+                        <div class="product-image-main">
+                            <img src="splendor/hero-splendor-motorcycless.jpg" alt=""
+                                id="product-main-image">
+                        </div>
+                        <div class="product-image-slider">
+                            <img src="splendor/hero-splendor-motorcycless.jpg" alt="" class="image-list">
+                            <img src="splendor/hero-select-model-black-with-purple-1668593032524.webp" alt=""
+                                class="image-list">
+                            <img src="splendor/hero-select-model-black-with-sports-red-1668593035036.webp" alt=""
+                                class="image-list">
+                            <img src="splendor/hero-select-model-bumble-bee-yellow-1668593059681.webp" alt=""
+                                class="image-list">
+                            <img src="splendor/hero-select-model-heavy-grey-with-green-1668593036556.webp" alt=""
+                                class="image-list">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="product">
+                        <div class="product-title">
+                            <h2>Hero Splendor</h2>
+                        </div>
+                        <div class="product-rating">
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span class="review">( 747 Reviews )</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="offer-price">₹ 87,666</span>
+                            <span class="sale-price">On-Road Price</span>
+                        </div>
+
+                        <div class="product-details">
+                            <h3>Description</h3>
+                            <p>The Hero Splendor is a legendary and iconic commuter motorcycle known for its simplicity,
+                                reliability, and efficiency. Powered by a dependable 97.2cc single-cylinder engine, it
+                                offers a perfect balance of power and fuel economy, making it an ideal choice for daily
+                                commuting.
+
+                                The Splendor features a timeless design with a comfortable and upright seating position,
+                                ensuring a smooth and stress-free ride. Its lightweight frame and efficient suspension
+                                make it well-suited for navigating congested city streets. With a reputation for low
+                                maintenance and excellent mileage, the Splendor is a popular choice among
+                                budget-conscious riders.
+
+                                In summary, the Hero Splendor is a practical and no-nonsense commuter bike that caters
+                                to the needs of riders looking for a hassle-free and cost-effective mode of
+                                transportation. It continues to be a favorite for its simplicity and reliability.</p>
+                        </div>
+
+                        <div class="product-color">
+                            <h4>Color</h4>
+                            <div class="color-layout">
+                                <div class="color-layout">
+                                    <input type="radio" id="blue" name="color" value="blue" class="color-input"
+                                        onclick="changeMainImage('blue')">
+                                    <label for="blue" class="blue"></label>
+
+                                    <input type="radio" id="white" name="color" value="white" class="color-input"
+                                        onclick="changeMainImage('white')">
+                                    <label for="white" class="white"></label>
+
+                                    <input type="radio" id="red" name="color" value="red" class="color-input"
+                                        onclick="changeMainImage('red')">
+                                    <label for="red" class="red"></label>
+
+                                    <input type="radio" id="gray" name="color" value="gray" class="color-input"
+                                        onclick="changeMainImage('gray')">
+                                    <label for="gray" class="gray"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="divider"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Script -->
+    <script>
+        const sliderMainImage = document.getElementById("product-main-image"); // product container image
+        const sliderImageList = document.getElementsByClassName("image-list"); // image thumbnail group selection
+        const colorInputs = document.getElementsByClassName("color-input"); // color input buttons
+
+        for (let i = 0; i < sliderImageList.length; i++) {
+            sliderImageList[i].onclick = function () {
+                sliderMainImage.src = sliderImageList[i].src;
+                console.log(sliderMainImage.src);
+            };
+        }
+
+        for (let i = 0; i < colorInputs.length; i++) {
+            colorInputs[i].onclick = function () {
+                const color = colorInputs[i].value;
+                switch (color) {
+                    case "blue":
+                        sliderMainImage.src = "splendor/hero-select-model-black-with-purple-1668593032524.webp";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "white":
+                        sliderMainImage.src = "splendor/hero-select-model-black-with-sports-red-1668593035036.webp";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "red":
+                        sliderMainImage.src = "splendor/hero-select-model-bumble-bee-yellow-1668593059681.webp";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "gray":
+                        sliderMainImage.src = "splendor/hero-select-model-heavy-grey-with-green-1668593036556.webp";
+                        console.log(sliderMainImage.src);
+                        break;
+                    default:
+                        break;
+                }
+            };
+        }
+    </script>
+    <style>
+        table {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        table,
+        th,
+        td {
+            border: 3px solid white;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            text-align: center;
+            background-color: rgb(30, 30, 30);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: black;
+        }
+    </style>
+    </head>
+
+    <body>
+
+         <div class="re-buttons">
+            <div class="icon-button" onclick="window.location.href='bookatestride.html';">
+                <i class="fa fa-motorcycle"></i>
+                <span>Book a Ride</span>
+            </div>
+            <div class="icon-button" onclick="window.location.href='bookaservice.html';">
+                <a> <i class="fa fa-gears"></i>
+                    <span>Book a Service</span></a>
+
+            </div>
+        </div>
+
+        <h2 style="text-align: center;">Splendor Key Highlights</h2><br>
+
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Specification</th>
+            </tr>
+            <tr>
+                <td>Engine Capacity</td>
+                <td>97.2 cc</td>
+            </tr>
+            <tr>
+                <td>Mileage - ARAI</td>
+                <td>60 kmpl</td>
+            </tr>
+            <tr>
+                <td>Transmission</td>
+                <td>4 Speed Manual</td>
+            </tr>
+            <tr>
+                <td>Kerb Weight</td>
+                <td>112 kg</td>
+            </tr>
+            <tr>
+                <td>Fuel Tank Capacity</td>
+                <td>9.8 litres</td>
+            </tr>
+            <tr>
+                <td>Seat Height</td>
+                <td>785 mm</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            p {
+                text-align: left;
+            }
+        </style>
+        </head>
+
+        <h2 style="text-align: left;">Hero Splendor Summary</h2>
+        <br>
+        <br>
+
+        <p>Price: Hero Splendor Plus price for its variant - Splendor Plus Self Alloy - BS VI starts at Rs. 87,666. The
+            price for the other variants - Splendor Plus Self Alloy i3S - BS VI and Splendor Plus Black and Accent
+            Edition are Rs. 89,130 and Rs. 89,130. The mentioned Splendor Plus prices are the on-road price of Delhi.<br><br>
+
+            Hero Splendor Plus is a mileage bike available in 3 variants and 7 colours. The Hero Splendor Plus is
+            powered by 97.2cc BS6 engine which develops a power of 7.91 bhp and a torque of 8.05 Nm. With both front and
+            rear drum brakes, Hero Splendor Plus comes up with combined braking system of both wheels. This Splendor
+            Plus bike weighs 112 kg and has a fuel tank capacity of 9.8 liters.<br><br>
+
+            The Splendor Plus continues to be Hero Motocorp’s best-selling product. The motorcycle comes in three
+            variants including kick-start with alloy wheels, self-start with alloy wheels and self-start with alloys and
+            i3S.<br><br>
+
+            The 100cc, carbureted motor of the Splendor Plus has now been updated with a fuel-injection set up with
+            Hero’s ‘XSens technology.’ The engine now produces 7.91bhp at 8,000rpm and 8.05Nm at 6,000rpm. This is a
+            drop of 1.3bhp with the torque figure remaining intact but arriving 1000rpm later. The engine continues to
+            be mated with a four-speed gearbox.<br><br>
+
+            While the motorcycle has remained unchanged in terms of styling, Hero did introduce the new Black and Accent
+            variant and the 100 Million Edition to keep the market excited. Here, the wheels, engine and chain cover
+            have been dipped in black. The cycle parts have also been retained with telescopic forks and dual shock
+            absorbers and drum brakes at both ends. While the BS4 Splendor Plus weighs 109kg (kerb), the BS6 model is
+            slightly heavy due to the changes on the engine. The fuel tank capacity stands at 11 litres.<br><br>
+
+            Considering its displacement and purpose, the Hero Splendor Plus BS6 faces competition from the TVS Sport.</p>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!--footer -->
+        <div class="footer">
+            <div class="footer-section">
+                <h2>Why Choose Us?</h2>
+                <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and esteemed
+                    bike
+                    dealers, simplifying the process of acquiring a new bike. With an extensive range of bike choices
+                    and
+                    personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping experience.
+                    <br>The
+                    platform's user-friendly interface provides comprehensive details, expert insights, and secure
+                    transactions.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+                    <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+                    <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+                    <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+                    <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+                    <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+                    <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+                    <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Contact Us</h2>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <hr style="color: white;">
+        <p style="color: white;" style="font-size: xx-small">@Ride-O-Holic. T&C applied. Made By Kunj, Naman, Snigdh,
+            Varenyam</p>
+
+
+    </body>
+
+</html>

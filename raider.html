@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raider 125</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="raider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navigation-bar">
+        <div class="company-name">
+            <h2>Ride-O-Holic</h2>
+        </div>
+        <ul class="nav-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+        <a href="#">Bikes</a>
+        <ul class="dropdown-content">
+          <li><a href="royalenfeild.html">Royal Enfeild</a></li>
+          <li><a href="TVS.html">TVS</a></li>
+          <li><a href="yamaha.html">Yamaha</a></li>
+          <li><a href="Hero.html">Hero</a></li>
+          <li><a href="Bajaj.html">Bajaj</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="accesories.html">Accessories</a>
+      </li>
+      <li class="dropdown">
+        <a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="partnerships.html">Partnership</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+             
+            <li class="dropdown">
+                <a href="#">Login</a>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="heading-container">
+        <h2>MOTORCYCLES > <span class="classic-heading">RAIDER 125</span></h2>
+    </div>
+
+    <div class="container">
+        <div class="single-product">
+            <div class="row">
+                <div class="col-6">
+                    <div class="product-image">
+                        <div class="product-image-main">
+                            <img src="Raider/raider-125-right-front-three-quarter.png" alt="" id="product-main-image">
+                        </div>
+                        <div class="product-image-slider">
+                            <img src="Raider/raider-125-right-front-three-quarter.png" alt="" class="image-list">
+                            
+                            <img src="Raider/tvs-select-model-striking-red-1669616319261.png" alt=""
+                                class="image-list">
+                            <img src="Raider/tvs-select-model-blazing-blue-1669616322221.png" alt=""
+                                class="image-list">
+                            <img src="Raider/tvs-select-model-fiery-yellow-1669616320869.png"
+                                alt="" class="image-list">
+                            <img src="Raider/tvs-select-model-wicked-black-1669616317007.png" alt=""
+                                class="image-list">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="product">
+                        <div class="product-title">
+                            <h2>TVS Raider 125</h2>
+                        </div>
+                        <div class="product-rating">
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span class="review">( 69 Reviews )</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="offer-price">₹ 1,13,389</span>
+                            <span class="sale-price">On-Road Price</span>
+                        </div>
+
+                        <div class="product-details">
+                            <h3>Description</h3>
+                            <p>The TVS Raider 125 is a stylish and versatile commuter motorcycle designed for urban and
+                                suburban riders. It is powered by a 125cc single-cylinder engine that offers a balance
+                                between fuel efficiency and performance. The Raider 125 showcases a contemporary design
+                                with sharp lines, LED lighting, and a sleek digital instrument cluster, giving it a
+                                modern and attractive appearance.
+                                With a comfortable riding posture, the Raider 125 is well-suited for daily commuting and
+                                short trips. It features a comfortable saddle and refined suspension, ensuring a smooth
+                                and enjoyable ride. The bike is also equipped with features like a USB charger and
+                                synchronized braking technology for enhanced safety.
+                                In summary, the TVS Raider 125 offers a stylish and practical option for riders looking
+                                for a reliable and efficient commuter motorcycle with modern design elements and
+                                user-friendly features.</p>
+                        </div>
+
+                        <div class="product-color">
+                            <h4>Color</h4>
+                            <div class="color-layout">
+                                <div class="color-layout">
+                                    <input type="radio" id="blue" name="color" value="blue" class="color-input"
+                                        onclick="changeMainImage('blue')">
+                                    <label for="blue" class="blue"></label>
+
+                                    <input type="radio" id="white" name="color" value="white" class="color-input"
+                                        onclick="changeMainImage('white')">
+                                    <label for="white" class="white"></label>
+
+                                    <input type="radio" id="red" name="color" value="red" class="color-input"
+                                        onclick="changeMainImage('red')">
+                                    <label for="red" class="red"></label>
+
+                                    <input type="radio" id="gray" name="color" value="gray" class="color-input"
+                                        onclick="changeMainImage('gray')">
+                                    <label for="gray" class="gray"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="divider"></span>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Script -->
+    <script>
+        const sliderMainImage = document.getElementById("product-main-image"); // product container image
+        const sliderImageList = document.getElementsByClassName("image-list"); // image thumbnail group selection
+        const colorInputs = document.getElementsByClassName("color-input"); // color input buttons
+
+        for (let i = 0; i < sliderImageList.length; i++) {
+            sliderImageList[i].onclick = function () {
+                sliderMainImage.src = sliderImageList[i].src;
+                console.log(sliderMainImage.src);
+            };
+        }
+
+        for (let i = 0; i < colorInputs.length; i++) {
+            colorInputs[i].onclick = function () {
+                const color = colorInputs[i].value;
+                switch (color) {
+                    case "blue":
+                        sliderMainImage.src = "Raider/tvs-select-model-striking-red-1669616319261.png";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "white":
+                        sliderMainImage.src = "Raider/tvs-select-model-blazing-blue-1669616322221.png";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "red":
+                        sliderMainImage.src = "Raider/tvs-select-model-fiery-yellow-1669616320869.png";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "gray":
+                        sliderMainImage.src = "Raider/tvs-select-model-wicked-black-1669616317007.png";
+                        console.log(sliderMainImage.src);
+                        break;
+                    default:
+                        break;
+                }
+            };
+        }
+    </script>
+    <style>
+        table {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        table,
+        th,
+        td {
+            border: 3px solid white;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            text-align: center;
+            background-color: rgb(30, 30, 30);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: black;
+        }
+    </style>
+    </head>
+
+    <body>
+
+         <div class="re-buttons">
+            <div class="icon-button" onclick="window.location.href='bookatestride.html';">
+                <i class="fa fa-motorcycle"></i>
+                <span>Book a Ride</span>
+            </div>
+            <div class="icon-button" onclick="window.location.href='bookaservice.html';">
+                <a> <i class="fa fa-gears"></i>
+                    <span>Book a Service</span></a>
+
+            </div>
+        </div>
+
+        <h2 style="text-align: center;">Raider 125 Key Highlights</h2><br>
+
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Specification</th>
+            </tr>
+            <tr>
+                <td>Engine Capacity</td>
+                <td>124.8 cc</td>
+            </tr>
+            <tr>
+                <td>Mileage - ARAI</td>
+                <td>56.7 kmpl</td>
+            </tr>
+            <tr>
+                <td>Transmission</td>
+                <td>5 Speed Manual</td>
+            </tr>
+            <tr>
+                <td>Kerb Weight</td>
+                <td>123 kg</td>
+            </tr>
+            <tr>
+                <td>Fuel Tank Capacity</td>
+                <td>10 litres</td>
+            </tr>
+            <tr>
+                <td>Seat Height</td>
+                <td>780 mm</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            p {
+                text-align: left;
+            }
+        </style>
+        </head>
+
+        <h2 style="text-align: left;">TVS Raider 125</h2>
+        <br>
+        <br>
+
+        <p>TVS Raider 125 is a mileage bike available in 4 variants and 10 colours. Raider 125 price starts at Rs.
+            1,13,389 in India with top variant price starting from Rs. 1,19,061. The TVS Raider 125 is powered by
+            124.8cc BS6 engine which develops a power of 11.2 bhp and a torque of 11.2 Nm. With front disc and rear drum
+            brakes, TVS Raider 125 comes up with combined braking system of both wheels. This Raider 125 bike weighs 123
+            kg and has a fuel tank capacity of 10 liters.<br><br>
+
+            TVS Motor Company has updated its portfolio with the launch of a new premium commuter motorcycle, the
+            Raider. This new model from the Hosur-based two-wheeler maker competes against the Bajaj Pulsar NS 125 and
+            the Honda SP 125 in the Indian market. TVS Motor Company will offer the new Raider in three variants – Drum,
+            Disc, and Connected.<br><br>
+
+            All variants use a 124.8cc, single-cylinder, air-cooled, three-valve engine that produces 11.2bhp of power
+            at 7,500rpm and 11.2Nm of peak torque at 6,000rpm. The motor is linked to a five-speed transmission. The
+            company claims that the 0-60kmph acceleration takes 5.9 seconds while the top speed has been rated at
+            99kmph.<br><br>
+
+            The styling cues include a modern design for the LED headlight, body-coloured headlight cowl, body-coloured
+            front fender, split-style saddle, aluminium grab rail, and an engine cowl. This 125cc sporty commuter
+            motorcycle is available in four options – Striking Red, Blazing Blue, Wicked Black, and Fiery Yellow.<br><br>
+
+            The standard features on both variants of the motorcycle comprise an LED headlight with integrated LED DRLs,
+            an LED taillight, a five-inch digital display, Idle Stop-Start system, two ride modes (Eco and Power), and a
+            first-in-segment under-seat storage. The Connected variant further benefits from a colour TFT display,
+            Bluetooth system, and Voice Assist function that works with TVS SmartXConnect system. The Connected variant
+            gets additional functions such as navigation, voice assist, incoming calls, and message notifications. A USB
+            charger is available as an optional extra.<br><br>
+
+            The suspension setup includes 30mm telescopic front forks and a preload-adjustable rear mono-shock. The
+            braking tasks on the base version are handled by drum units on both wheels. The disc variant gets a 240mm
+            disc at the front and a 130mm drum unit at the back. The safety net across all variants comprises combined
+            braking system.<br><br></p>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!--footer -->
+        <div class="footer">
+            <div class="footer-section">
+                <h2>Why Choose Us?</h2>
+                <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and esteemed
+                    bike
+                    dealers, simplifying the process of acquiring a new bike. With an extensive range of bike choices
+                    and
+                    personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping experience.
+                    <br>The
+                    platform's user-friendly interface provides comprehensive details, expert insights, and secure
+                    transactions.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+                    <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+                    <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+                    <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+                    <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+                    <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+                    <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+                    <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Contact Us</h2>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <hr style="color: white;">
+        <p style="color: white;" style="font-size: xx-small">@Ride-O-Holic. T&C applied. Made By Kunj, Naman, Snigdh,
+            Varenyam</p>
+
+
+    </body>
+
+</html>

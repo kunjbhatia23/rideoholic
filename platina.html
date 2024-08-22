@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platina 110</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="platina.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navigation-bar">
+        <div class="company-name">
+            <h2>Ride-O-Holic</h2>
+        </div>
+        <ul class="nav-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+        <a href="#">Bikes</a>
+        <ul class="dropdown-content">
+          <li><a href="royalenfeild.html">Royal Enfeild</a></li>
+          <li><a href="TVS.html">TVS</a></li>
+          <li><a href="yamaha.html">Yamaha</a></li>
+          <li><a href="Hero.html">Hero</a></li>
+          <li><a href="Bajaj.html">Bajaj</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="accesories.html">Accessories</a>
+      </li>
+      <li class="dropdown">
+        <a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="partnerships.html">Partnership</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+             
+            <li class="dropdown">
+                <a href="#">Login</a>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="heading-container">
+        <h2>MOTORCYCLES > <span class="classic-heading">PLATINA 110</span></h2>
+    </div>
+
+    <div class="container">
+        <div class="single-product">
+            <div class="row">
+                <div class="col-6">
+                    <div class="product-image">
+                        <div class="product-image-main">
+                            <img src="Bajaj-Platina-110-HGear-Side-161263.webp" alt="" id="product-main-image">
+                        </div>
+                        <div class="product-image-slider">
+                            <img src="Bajaj-Platina-110-HGear-Side-161263.webp" alt="" class="image-list">
+                            <img src="bajaj-select-model-cocktail-wine-red--orange-drum-1671529669590.webp" alt="" class="image-list">
+                            <img src="bajaj-select-model-ebony-black-blue-drum-1671529664313.webp" alt=""
+                                class="image-list">
+                            <img src="bajaj-select-model-ebony-black-red-drum-1671529665614.webp" alt=""
+                                class="image-list">
+                            <img src="bajaj-select-model-charcoal-black-disc-1671024491842.webp" alt=""
+                                class="image-list">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="product">
+                        <div class="product-title">
+                            <h2>Bajaj Platina 110</h2>
+                        </div>
+                        <div class="product-rating">
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span class="review">( 169 Reviews )</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="offer-price">₹ 86,227</span>
+                            <span class="sale-price">On-Road Price</span>
+                        </div>
+
+                        <div class="product-details">
+                            <h3>Description</h3>
+                            <p>The Bajaj Platina 110 is a practical and efficient commuter motorcycle designed to cater
+                                to the everyday riding needs of urban and suburban riders. Powered by a 115.45cc, DTS-i
+                                engine, it strikes a balance between power and fuel economy, ensuring a cost-effective
+                                and reliable ride.
+
+                                The bike's design is understated yet functional, featuring a comfortable long saddle,
+                                alloy wheels, and stylish graphics. The Platina 110 offers a comfortable upright riding
+                                posture, making it an ideal choice for daily commuting and long journeys. It comes with
+                                advanced features like LED headlamps, a digital console, and tubeless tires for added
+                                safety and convenience.
+
+                                With its excellent fuel efficiency, smooth performance, and comfortable ergonomics, the
+                                Bajaj Platina 110 is a practical and dependable option for riders seeking a no-nonsense,
+                                economical commuter motorcycle that gets the job done efficiently.</p>
+                        </div>
+
+                        <div class="product-color">
+                            <h4>Color</h4>
+                            <div class="color-layout">
+                                <div class="color-layout">
+                                    <input type="radio" id="blue" name="color" value="blue" class="color-input"
+                                        onclick="changeMainImage('blue')">
+                                    <label for="blue" class="blue"></label>
+
+                                    <input type="radio" id="white" name="color" value="white" class="color-input"
+                                        onclick="changeMainImage('white')">
+                                    <label for="white" class="white"></label>
+
+                                    <input type="radio" id="red" name="color" value="red" class="color-input"
+                                        onclick="changeMainImage('red')">
+                                    <label for="red" class="red"></label>
+
+                                    <input type="radio" id="gray" name="color" value="gray" class="color-input"
+                                        onclick="changeMainImage('gray')">
+                                    <label for="gray" class="gray"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="divider"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Script -->
+    <script>
+        const sliderMainImage = document.getElementById("product-main-image"); // product container image
+        const sliderImageList = document.getElementsByClassName("image-list"); // image thumbnail group selection
+        const colorInputs = document.getElementsByClassName("color-input"); // color input buttons
+
+        for (let i = 0; i < sliderImageList.length; i++) {
+            sliderImageList[i].onclick = function () {
+                sliderMainImage.src = sliderImageList[i].src;
+                console.log(sliderMainImage.src);
+            };
+        }
+
+        for (let i = 0; i < colorInputs.length; i++) {
+            colorInputs[i].onclick = function () {
+                const color = colorInputs[i].value;
+                switch (color) {
+                    case "blue":
+                        sliderMainImage.src = "bajaj-select-model-cocktail-wine-red--orange-drum-1671529669590.webp";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "white":
+                        sliderMainImage.src = "bajaj-select-model-ebony-black-blue-drum-1671529664313.webp";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "red":
+                        sliderMainImage.src = "bajaj-select-model-ebony-black-red-drum-1671529665614.webp";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "gray":
+                        sliderMainImage.src = "bajaj-select-model-charcoal-black-disc-1671024491842.webp";
+                        console.log(sliderMainImage.src);
+                        break;
+                    default:
+                        break;
+                }
+            };
+        }
+    </script>
+    <style>
+        table {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        table,
+        th,
+        td {
+            border: 3px solid white;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            text-align: center;
+            background-color: rgb(30, 30, 30);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: black;
+        }
+    </style>
+    </head>
+
+    <body>
+
+         <div class="re-buttons">
+            <div class="icon-button" onclick="window.location.href='bookatestride.html';">
+                <i class="fa fa-motorcycle"></i>
+                <span>Book a Ride</span>
+            </div>
+            <div class="icon-button" onclick="window.location.href='bookaservice.html';">
+                <a> <i class="fa fa-gears"></i>
+                    <span>Book a Service</span></a>
+
+            </div>
+        </div>
+
+        <h2 style="text-align: center;">Platina 110 Key Highlights</h2><br>
+
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Specification</th>
+            </tr>
+            <tr>
+                <td>Engine Capacity</td>
+                <td>115.45 cc</td>
+            </tr>
+            <tr>
+                <td>Mileage - ARAI</td>
+                <td>70 kmpl</td>
+            </tr>
+            <tr>
+                <td>Transmission</td>
+                <td>5 Speed Manual</td>
+            </tr>
+            <tr>
+                <td>Kerb Weight</td>
+                <td>122 kg</td>
+            </tr>
+            <tr>
+                <td>Fuel Tank Capacity</td>
+                <td>11 litres</td>
+            </tr>
+            <tr>
+                <td>Seat Height</td>
+                <td>807 mm</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            p {
+                text-align: left;
+            }
+        </style>
+        </head>
+
+        <h2 style="text-align: left;">Yamaha MT 15 Summary</h2>
+        <br>
+        <br>
+
+        <p>Bajaj Platina 110 is a mileage bike available in 3 variants and 9 colours. Platina 110 price starts at Rs.
+            84,889 in India with top variant price starting from Rs. 96,582. The Bajaj Platina 110 is powered by
+            115.45cc BS6 engine which develops a power of 8.48 bhp and a torque of 9.81 Nm. With front disc and rear
+            drum brakes, Bajaj Platina 110 comes up with combined braking system of both wheels. This Platina 110 bike
+            weighs 122 kg and has a fuel tank capacity of 11 liters.<br><br>
+
+            The Bajaj Platina 110 is the only motorcycle in its segment to feature the safety net of Anti-lock Braking
+            System (ABS). The commuter motorcycle comes with a 240mm single disc with a single-channel ABS on the front
+            wheel while the rear uses a 110mm drum. It is also available in a more affordable variant that gets a drum
+            at both ends.<br><br>
+
+            The changes, however, are limited to the addition of ABS to the motorcycle. The styling cues and the feature
+            list remains unaltered, and the Bajaj Platina 110 ABS continues to use a halogen headlight with an LED DRL
+            at the front, knuckle guards, quilted seats, a Nitrox spring-on-spring rear suspension, telescopic front
+            forks, and alloy wheels with tubeless tyres.<br><br>
+
+            Mechanical specifications, too, retain the 115 cc, single-cylinder, air-cooled motor that makes 8.4bhp at
+            7,000rpm and 9.81Nm of peak torque at 5,000rpm. The engine is linked to a five-speed gearbox.<br><br>
+
+            The Platina 110 ABS will be offered in three colours – Charcoal Black, Volcanic Red, and Beach Blue. It
+            rivals the Hero Splendor, TVS Radeon, and the likes in the Indian market.</p>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!--footer -->
+        <div class="footer">
+            <div class="footer-section">
+                <h2>Why Choose Us?</h2>
+                <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and esteemed
+                    bike
+                    dealers, simplifying the process of acquiring a new bike. With an extensive range of bike choices
+                    and
+                    personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping experience.
+                    <br>The
+                    platform's user-friendly interface provides comprehensive details, expert insights, and secure
+                    transactions.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+                    <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+                    <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+                    <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+                    <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+                    <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+                    <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+                    <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Contact Us</h2>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <hr style="color: white;">
+        <p style="color: white;" style="font-size: xx-small">@Ride-O-Holic. T&C applied. Made By Kunj, Naman, Snigdh,
+            Varenyam</p>
+
+
+    </body>
+
+</html>

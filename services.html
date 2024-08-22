@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!--navigation bar-->
+    <nav class="navigation-bar">
+        <div class="company-name">
+            <h2>Ride-O-Holic</h2>
+        </div>
+        <ul class="nav-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Bikes</a>
+                <ul class="dropdown-content">
+                    <li><a href="royalenfeild.html">Royal Enfield</a></li>
+                    <li><a href="TVS.html">TVS</a></li>
+                    <li><a href="yamaha.html">Yamaha</a></li>
+                    <li><a href="Hero.html">Hero</a></li>
+                    <li><a href="Bajaj.html">Bajaj</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="accesories.html">Accessories</a>
+              </li>
+              <li class="dropdown">
+                <a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="partnerships.html">Partnership</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+
+            <li class="dropdown">
+                <a href="#">Login</a>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="re-motorcycles">
+        <h2 style="color: white; margin-left: 20px">Services</h2>
+        <button class="control-button" onclick="showSlide(1)">Foam Wash</button>
+        <button class="control-button" onclick="showSlide(2)">Bike Mechanical Service</button>
+        <button class="control-button" onclick="showSlide(3)">Paint Protection Film</button>
+    </div>
+    <!--slideshow images-->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="Services/foam wash.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Services/bikeservice.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Services/PPF.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+
+            function showSlide(slideNumber) {
+                showSlides(slideNumber);
+            }
+
+            // Updated showSlide function to link buttons to images
+            function showSlide(slideNumber) {
+                currentSlide(slideNumber);
+            }
+        </script>
+
+        <div class="royal-enfield">
+            <h1 style="left: auto;">MORE INFORMATION BELOW - </h1>
+
+            <div class="faq">
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">FOAM WASH</div>
+                        <div class="faq-answer"><br>At our motorcycle service shop, we pride ourselves on offering an
+                            unparalleled foam wash service designed specifically for motorcycles. Our foam wash isn't
+                            just a routine cleaning; it's a meticulous process crafted to ensure the utmost care and
+                            maintenance for your prized bike.<br><br>
+
+                            Our expert technicians understand the unique needs of motorcycles, which is why we use
+                            premium-grade, motorcycle-specific foam wash solutions. These specialized formulas are
+                            gentle yet powerful, capable of penetrating dirt and grime without compromising the
+                            integrity of your bike's surfaces.<br><br>
+
+                            What sets our foam wash service apart is the attention to detail. We begin with a thorough
+                            inspection, identifying areas that need special attention. Our team meticulously applies the
+                            foam wash, allowing it to cling to the surface and effectively lift away contaminants.
+                            Delicate parts and hard-to-reach areas are treated with precision, ensuring a comprehensive
+                            clean.<br><br>
+
+                            Beyond the immaculate results, our service emphasizes protection. The foam wash not only
+                            cleans but also creates a protective layer, guarding against corrosion and preserving the
+                            bike's finish. Additionally, our environmentally friendly approach ensures that the cleaning
+                            process is eco-conscious, using techniques that minimize water usage while maintaining
+                            superior cleaning standards.<br><br>
+
+                            At our motorcycle service shop, the foam wash isn't just a service; it's a commitment to
+                            maintaining your motorcycle's brilliance and longevity, ensuring that every ride feels as
+                            thrilling as the first.<br><br>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">BIKE SERVICE</div>
+                        <div class="faq-answer"><br>At our motorcycle service shop, we take pride in offering
+                            exceptional mechanic services tailored to ensure your bike operates at peak performance. Our
+                            dedicated team of experienced and certified mechanics is committed to providing
+                            comprehensive care for your motorcycle, addressing a wide array of mechanical needs with
+                            precision and expertise.<br><br>
+
+                            From routine maintenance tasks like oil changes, brake inspections, and tire replacements to
+                            intricate engine diagnostics and repairs, our mechanics possess the skill and knowledge to
+                            handle various aspects of motorcycle maintenance and repair. We prioritize a thorough
+                            understanding of your bike's specific make and model, employing specialized tools and
+                            up-to-date techniques to deliver top-notch service.<br><br>
+
+                            What sets our mechanic service apart is our commitment to transparency and personalized
+                            care. We communicate openly with our customers, discussing all necessary repairs or
+                            maintenance before proceeding, ensuring you're informed and comfortable with the service
+                            provided. Whether it's fine-tuning the engine, adjusting suspension, or resolving electrical
+                            issues, we prioritize both the performance and safety of your motorcycle.<br><br>
+
+                            Additionally, our shop emphasizes quality parts and components, utilizing genuine or
+                            high-grade replacements to guarantee the longevity and reliability of the repairs conducted.
+                            With a focus on attention to detail and a passion for motorcycles, our mechanic service aims
+                            to not only fix issues but also enhance your riding experience, keeping your bike in prime
+                            condition for countless adventures ahead.<br><br></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">PAINT PROTECTION FILM</div>
+                        <div class="faq-answer"><br>At our motorcycle service shop, we offer an exceptional Paint
+                            Protection Film (PPF) service dedicated to safeguarding your bike's aesthetics and
+                            preserving its pristine appearance. PPF is a transparent, durable layer applied to the
+                            motorcycle's body, shielding it from various external elements like stone chips, scratches,
+                            and road debris.<br><br>
+
+                            Our PPF service begins with a meticulous assessment of your bike's surfaces, identifying
+                            vulnerable areas prone to damage. We then employ cutting-edge technology and precision
+                            techniques to apply the PPF seamlessly, ensuring comprehensive coverage while maintaining
+                            the original aesthetics of your motorcycle.<br><br>
+
+                            What distinguishes our PPF service is the quality of materials and craftsmanship. We use
+                            premium-grade PPF, engineered to withstand harsh environmental conditions and maintain
+                            optical clarity, effectively safeguarding your bike's paintwork without compromising its
+                            visual appeal.<br><br>
+
+                            Moreover, our skilled technicians possess a keen eye for detail, meticulously fitting and
+                            shaping the PPF to the contours of your motorcycle, providing a virtually invisible yet
+                            highly protective layer. This process not only shields against scratches and chips but also
+                            offers UV resistance, preventing paint fading and maintaining the bike's showroom finish for
+                            years to come.<br><br>
+
+                            At our motorcycle service shop, our commitment to excellence in PPF application ensures that
+                            your bike receives unparalleled protection, preserving its beauty and value while allowing
+                            you to ride with confidence, knowing your investment is shielded against the elements.<br><br>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <h2 style="left: auto;">TO BOOK ANY SERVICE, FILL THE FORM GIVEN BELOW - </h2>
+            <BR>
+                
+                <div class="icon-button" style="display: flex; justify-content: center; align-items: center;" onclick="window.location.href='bookaservice.html';">
+                    <a> <i class="fa fa-gears"></i>
+                        <span>Book a Service</span></a>
+    </div>
+    <br><br><br>
+                <h3>Service Center Address - <br><br>
+                Plot no 8, pocket-2, Rohini-24, Delhi-35</h3>
+
+            </div>
+            <br><br><br><br><br>
+            <script>
+                const faqItems = document.querySelectorAll('.faq-item');
+
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question');
+
+                    question.addEventListener('click', () => {
+                        item.classList.toggle('open');
+                    });
+                });
+            </script>
+            <hr />
+            <!--footer -->
+            <div class="footer">
+                <div class="footer-section">
+                    <h2>Why Choose Us?
+                    </h2>
+                    <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and
+                        esteemed
+                        bike
+                        dealers, simplifying the process of acquiring a new bike. With an extensive range of bike
+                        choices
+                        and
+                        personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping
+                        experience.
+                        <br>The
+                        platform's user-friendly interface provides comprehensive details, expert insights, and
+                        secure
+                        transactions.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h2>Quick Links</h2>
+                    <ul class="footer-list">
+                        <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+                        <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+                        <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+                        <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+                        <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+                        <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+                        <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+                        <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h2>Contact Us</h2>
+                    <ul class="footer-list">
+                        <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+                        <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <hr style="color: white;">
+            <p style="color: white;" style="font-size: smaller;">@Ride-O-Holic. T&C applied. Made By Kunj, Naman,
+                Snigdh,
+                Varenyam</p>
+
+
+</body>
+
+</html>

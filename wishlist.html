@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="shoppingcart.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Include your other stylesheets and scripts here -->
+  <style>
+    #wishlist-container {
+      display: flex;
+    }
+
+    #calculator-container {
+      flex: 1;
+      padding: 10px;
+      border-right: 2px solid #ccc;
+    }
+
+    #checkout-container {
+      flex: 1;
+      padding: 10px;
+      text-align: center;
+    }
+
+    #wishlist-items-container {
+      flex: 2;
+      padding: 10px;
+    }
+
+    .wishlist-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .quantity-controls {
+      display: flex;
+      gap: 10px;
+    }
+
+    #checkout-btn {
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    #checkout-btn:hover {
+      background-color: #e74c3c;
+      /* Change to red on hover */
+    }
+  </style>
+</head>
+
+<body>
+  <!--navigation bar-->
+  <nav class="navigation-bar">
+    <div class="company-name">
+      <h2>Ride-O-Holic</h2>
+    </div>
+    <ul class="nav-buttons">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Bikes</a>
+        <ul class="dropdown-content">
+          <li><a href="royalenfeild.html">Royal Enfeild</a></li>
+          <li><a href="TVS.html">TVS</a></li>
+          <li><a href="yamaha.html">Yamaha</a></li>
+          <li><a href="Hero.html">Hero</a></li>
+          <li><a href="Bajaj.html">Bajaj</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="accesories.html">Accessories</a>
+      </li>
+      <li class="dropdown">
+        <a href="services.html">Services</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="partnerships.html">Partnership</a></li>
+      <li><a href="AboutUs.html">About Us</a></li>
+      <li class="dropdown">
+        <a href="#">Login</a>
+        <ul class="dropdown-content">
+          <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+
+  <h1>Shopping Cart</h1>
+
+  <div id="wishlist-container">
+    <!-- Price Calculator -->
+    <div id="calculator-container">
+      <h1>Price Calculator</h1>
+      <h1>Total Price: <u><span id="total-price">0</u></span></h1>
+    </div>
+    <div id="checkout-container">
+      <a id="checkout-btn" href="#">Checkout</a>
+    </div>
+    <!-- Wishlist Items -->
+    <div id="wishlist-items-container"></div>
+  </div>
+
+  <script>
+    // Load wishlist items from local storage
+    document.addEventListener('DOMContentLoaded', function () {
+      displayWishlistItems();
+      calculateTotalPrice();
+    });
+
+    function displayWishlistItems() {
+      // Get the wishlist items from local storage
+      let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+      // Display wishlist items
+      let wishlistItemsContainer = document.getElementById('wishlist-items-container');
+      wishlistItemsContainer.innerHTML = ''; // Clear previous content
+
+      if (wishlist.length === 0) {
+        wishlistItemsContainer.innerHTML = '<p>No item in wishlist.</p>';
+      } else {
+        wishlist.forEach(item => {
+          let productElement = document.createElement('div');
+          productElement.classList.add('wishlist-item');
+          productElement.innerHTML = `
+                        <div>
+                            <img src="${item.image}" alt="${item.name}" style="max-width: 100px;">
+                            <h3>${item.name}</h3>
+                            <p>Price: ${item.price}</p>
+                            <div class="quantity-controls">
+                                <button onclick="changeQuantity('${item.name}', -1)">-</button>
+                                <span>${item.quantity || 1}</span>
+                                <button onclick="changeQuantity('${item.name}', 1)">+</button>
+                            </div>
+                        </div>
+                        <div>
+                            <button onclick="removeFromWishlist('${item.name}')">Remove</button>
+                        </div>
+                    `;
+          wishlistItemsContainer.appendChild(productElement);
+        });
+      }
+    }
+
+    function calculateTotalPrice() {
+      // Get the wishlist items from local storage
+      let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+      // Calculate total price
+      let totalPrice = wishlist.reduce((total, item) => total + (item.price * (item.quantity || 1)), 0);
+
+      // Update the total price on the page
+      document.getElementById('total-price').textContent = totalPrice;
+    }
+
+    function changeQuantity(productName, change) {
+      // Get the wishlist items from local storage
+      let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+      // Find the product in the wishlist
+      let product = wishlist.find(item => item.name === productName);
+
+      if (product) {
+        // Update the quantity
+        product.quantity = (product.quantity || 1) + change;
+
+        // Save the updated wishlist to local storage
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+
+        // Redisplay wishlist items and recalculate total price
+        displayWishlistItems();
+        calculateTotalPrice();
+      }
+    }
+
+    function removeFromWishlist(productName) {
+      // Get the wishlist items from local storage
+      let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+      // Remove the product from the wishlist
+      wishlist = wishlist.filter(item => item.name !== productName);
+
+      // Save the updated wishlist to local storage
+      localStorage.setItem('wishlist', JSON.stringify(wishlist));
+
+      // Redisplay wishlist items and recalculate total price
+      displayWishlistItems();
+      calculateTotalPrice();
+    }
+  </script>
+
+  <!--footer -->
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="footer">
+    <div class="footer-section">
+      <h2>Why Choose Us?</h2>
+      <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and esteemed bike
+        dealers, simplifying the process of acquiring a new bike. With an extensive range of bike choices and
+        personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping experience. <br>The
+        platform's user-friendly interface provides comprehensive details, expert insights, and secure transactions.
+      </p>
+    </div>
+    <div class="footer-section">
+      <h2>Quick Links</h2>
+      <ul class="footer-list">
+        <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+        <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+        <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+        <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+        <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+        <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+        <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+        <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h2>Contact Us</h2>
+      <ul class="footer-list">
+        <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+        <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+      </ul>
+    </div>
+    <!-- Include your other scripts and stylesheets here -->
+</body>
+
+</html>

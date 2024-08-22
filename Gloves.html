@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gloves</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="Gloves.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navigation-bar">
+        <div class="company-name">
+            <h2>Ride-O-Holic</h2>
+        </div>
+        <ul class="nav-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Bikes</a>
+                <ul class="dropdown-content">
+                    <li><a href="royalenfeild.html">Royal Enfeild</a></li>
+                    <li><a href="TVS.html">TVS</a></li>
+                    <li><a href="yamaha.html">Yamaha</a></li>
+                    <li><a href="Hero.html">Hero</a></li>
+                    <li><a href="Bajaj.html">Bajaj</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="accesories.html">Accessories</a>
+              </li>
+              <li class="dropdown">
+                <a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="partnerships.html">Partnership</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="#">Login</a>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav-buttons">
+            <!-- ... Other navigation links ... -->
+            <li class="cart-icon" onclick="window.location.href = 'wishlist.html';">
+                <i class='bx bx-cart-alt'></i>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="heading-container">
+        <h2>ACCESSORIES > <span class="classic-heading">GLOVES</span></h2>
+    </div>
+
+    <div class="container">
+        <div class="single-product">
+            <div class="row">
+                <div class="col-6">
+                    <div class="product-image">
+                        <div class="product-image-main">
+                            <img src="Accessories/Gloves/main gloves.jpg" alt="" id="product-main-image">
+                        </div>
+                        <div class="product-image-slider">
+                            <img src="Accessories/Gloves/main gloves.jpg" alt="" class="image-list">
+                            <img src="Accessories/Gloves/yellow.jpg" alt="" class="image-list">
+                            <img src="Accessories/Gloves/green.jpg" alt="" class="image-list">
+                            <img src="Accessories/Gloves/blue.jpg" alt="" class="image-list">
+                            <img src="Accessories/Gloves/orange.jpg" alt="" class="image-list">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="product">
+                        <div class="product-title">
+                            <h2>COFIT Motorcycle Gloves Breathable, Touchscreen Motorbike Gloves</h2>
+                        </div>
+                        <div class="product-rating">
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span class="review">( 69 Reviews )</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="offer-price">₹ 1,500</span>
+                            <span class="sale-price">Sizes Available - S, M, L, XL</span>
+                        </div>
+
+                        <div class="product-details">
+                            <h3>Description</h3>
+                            <p>Multi-Purpose Gloves - Ideal for motocross, BMX ATV MTB riding, road racing, cycling,
+                                climbing, skating and all other outdoor activities.<br><br>
+                                Perfect Grip and Control - Wear-resistant silicone gel dots in palm part effectively
+                                increase the grip of your handlebars to ensure more control and safety.<br><br>
+                                Touchscreen Fingertips - Contained conductive metal fiber on both fingertips of index
+                                finger and thumb, the gloves work well with all touch screen devices.<br><br>
+                                Full Protection - With superior hard PVC fist knuckle gear and palm pad, COFIT
+                                motorcycle gloves offer essential protection for your hands.<br><br>
+                                Breathable and Comfortable - Made of breathable and durable polyester, COFIT gloves are
+                                suitable for using at all seasons, best use at 10°C-38°C / 50℉-100℉.<br></p>
+                        </div>
+
+                        <div class="product-color">
+                            <h4>Color</h4>
+                            <div class="color-layout">
+                                <div class="color-layout">
+                                    <input type="radio" id="blue" name="color" value="blue" class="color-input"
+                                        onclick="changeMainImage('blue')">
+                                    <label for="blue" class="blue"></label>
+
+                                    <input type="radio" id="white" name="color" value="white" class="color-input"
+                                        onclick="changeMainImage('white')">
+                                    <label for="white" class="white"></label>
+
+                                    <input type="radio" id="red" name="color" value="red" class="color-input"
+                                        onclick="changeMainImage('red')">
+                                    <label for="red" class="red"></label>
+
+                                    <input type="radio" id="gray" name="color" value="gray" class="color-input"
+                                        onclick="changeMainImage('gray')">
+                                    <label for="gray" class="gray"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="divider"></span>
+
+                        <div class="product-btn-group">
+                            <div class="button buy-now"><i class='bx bxs-zap'></i>Buy Now</div>
+                            <div class="button heart"><i class='bx bxs-heart'></i>Add to Wishlist</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Script -->
+    <script>
+        const sliderMainImage = document.getElementById("product-main-image"); // product container image
+        const sliderImageList = document.getElementsByClassName("image-list"); // image thumbnail group selection
+        const colorInputs = document.getElementsByClassName("color-input"); // color input buttons
+
+        for (let i = 0; i < sliderImageList.length; i++) {
+            sliderImageList[i].onclick = function () {
+                sliderMainImage.src = sliderImageList[i].src;
+                console.log(sliderMainImage.src);
+            };
+        }
+
+        for (let i = 0; i < colorInputs.length; i++) {
+            colorInputs[i].onclick = function () {
+                const color = colorInputs[i].value;
+                switch (color) {
+                    case "blue":
+                        sliderMainImage.src = "Accessories/Gloves/yellow.jpg";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "white":
+                        sliderMainImage.src = "Accessories/Gloves/green.jpg";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "red":
+                        sliderMainImage.src = "Accessories/Gloves/blue.jpg";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "gray":
+                        sliderMainImage.src = "Accessories/Gloves/orange.jpg";
+                        console.log(sliderMainImage.src);
+                        break;
+                    default:
+                        break;
+                }
+            };
+        }
+    </script>
+    <style>
+        table {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        table,
+        th,
+        td {
+            border: 3px solid white;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            text-align: center;
+            background-color: rgb(30, 30, 30);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: black;
+        }
+    </style>
+    </head>
+
+
+    <br><br><br><br><br><br><br>
+    <h2 style="text-align: center;">COFIT Motorcycle Gloves Breathable, Touchscreen Motorbike Gloves</h2><br>
+
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Specification</th>
+        </tr>
+        <tr>
+            <td>Material</td>
+            <td>Polyester</td>
+        </tr>
+        <tr>
+            <td>Age Range</td>
+            <td>Adult</td>
+        </tr>
+        <tr>
+            <td>Weight</td>
+            <td>150g</td>
+        </tr>
+        <tr>
+            <td>Dimensions</td>
+            <td>9.4 x 5.9 x 1.6 inches</td>
+        </tr>
+        <tr>
+            <td>Special Features</td>
+            <td>Slip Resistant, Breathable, Touch Screen Support</td>
+        </tr>
+        <tr>
+            <td>Date First Available</td>
+            <td>April 2, 2020</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        p {
+            text-align: left;
+        }
+    </style>
+    </head>
+
+    <h2 style="text-align: left;">COFIT Motorcycle Gloves Breathable, Touchscreen Motorbike Gloves Summary</h2>
+    <br>
+    <br>
+
+    <p>Versatile and adaptable, these COFIT gloves serve multiple outdoor activities, from motocross and road racing to
+        cycling and climbing. They prioritize control and safety with wear-resistant silicone gel dots on the palm for a
+        reliable grip on handlebars. Featuring touchscreen-compatible fingertips, thanks to conductive metal fibers on
+        the index finger and thumb, these gloves enable easy device usage. Offering full hand protection, they boast
+        superior hard PVC fist knuckle gear and palm pads. Crafted from breathable and durable polyester, these gloves
+        ensure comfort throughout the year, suitable for temperatures ranging between 10°C to 38°C (50℉-100℉).
+    </p>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!--footer -->
+    <div class="footer">
+        <div class="footer-section">
+            <h2>Why Choose Us?</h2>
+            <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and esteemed
+                bike
+                dealers, simplifying the process of acquiring a new bike. With an extensive range of bike choices
+                and
+                personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping experience.
+                <br>The
+                platform's user-friendly interface provides comprehensive details, expert insights, and secure
+                transactions.
+            </p>
+        </div>
+        <div class="footer-section">
+            <h2>Quick Links</h2>
+            <ul class="footer-list">
+                <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+                <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+                <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+                <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+                <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+                <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+                <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+                <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h2>Contact Us</h2>
+            <ul class="footer-list">
+                <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+                <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+    <hr style="color: white;">
+    <p style="color: white;" style="font-size: xx-small">@Ride-O-Holic. T&C applied. Made By Kunj, Naman, Snigdh,
+        Varenyam</p>
+
+    <script>
+        function redirectToWishlist() {
+            window.location.href = 'wishlist.html';
+        }
+
+        function addToWishlist() {
+            // Get the product details
+            const productName = "COFIT Motorcycle Gloves Breathable, Touchscreen Motorbike Gloves";
+            const productPrice = 1500;
+            const productImage = "Accessories/Gloves/main gloves.jpg";
+
+            // Check if a wishlist exists in local storage
+            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+            // Check if the product is already in the wishlist
+            const existingProduct = wishlist.find(item => item.name === productName);
+
+            if (!existingProduct) {
+                // If the product is not in the wishlist, add it
+                wishlist.push({
+                    name: productName,
+                    price: productPrice,
+                    image: productImage
+                });
+
+                // Save the updated wishlist to local storage
+                localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            }
+
+            // Redirect to the wishlist page
+            redirectToWishlist();
+        }
+
+        const buyNowButton = document.querySelector('.buy-now');
+        const addToWishlistButton = document.querySelector('.heart');
+
+        if (buyNowButton) {
+            buyNowButton.addEventListener('click', redirectToWishlist);
+        }
+
+        if (addToWishlistButton) {
+            addToWishlistButton.addEventListener('click', addToWishlist);
+        }
+    </script>
+</body>
+
+</html>

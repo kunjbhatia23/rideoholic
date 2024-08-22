@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="Shoes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navigation-bar">
+        <div class="company-name">
+            <h2>Ride-O-Holic</h2>
+        </div>
+        <ul class="nav-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+        <a href="#">Bikes</a>
+        <ul class="dropdown-content">
+          <li><a href="royalenfeild.html">Royal Enfeild</a></li>
+          <li><a href="TVS.html">TVS</a></li>
+          <li><a href="yamaha.html">Yamaha</a></li>
+          <li><a href="Hero.html">Hero</a></li>
+          <li><a href="Bajaj.html">Bajaj</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="accesories.html">Accessories</a>
+      </li>
+      <li class="dropdown">
+        <a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="partnerships.html">Partnership</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="#">Login</a>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav-buttons">
+            <!-- ... Other navigation links ... -->
+            <li class="cart-icon" onclick="window.location.href = 'wishlist.html';">
+                <i class='bx bx-cart-alt'></i>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="heading-container">
+        <h2>ACCESSORIES > <span class="classic-heading">SHOES</span></h2>
+    </div>
+
+    <div class="container">
+        <div class="single-product">
+            <div class="row">
+                <div class="col-6">
+                    <div class="product-image">
+                        <div class="product-image-main">
+                            <img src="Accessories/Shoes/main shoes image.jpg" alt="" id="product-main-image">
+                        </div>
+                        <div class="product-image-slider">
+                            <img src="Accessories/Shoes/main shoes image.jpg" alt="" class="image-list">
+                            <img src="Accessories/Shoes/black shoes.jpg" alt="" class="image-list">
+                            <img src="Accessories/Shoes/green shoes.jpg" alt="" class="image-list">
+                            <img src="Accessories/Shoes/red shoes.jpg" alt="" class="image-list">
+                            <img src="Accessories/Shoes/yellow shoes.jpg" alt="" class="image-list">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="product">
+                        <div class="product-title">
+                            <h2>SHIMA Edge Vented, Motorcycle Shoes for Men</h2>
+                        </div>
+                        <div class="product-rating">
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span class="review">( 76 Reviews )</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="offer-price">₹ 3,111</span>
+                            <span class="sale-price">Sizes Available - UK 7, UK 8, UK 9, UK 10, UK 11</span>
+                        </div>
+
+                        <div class="product-details">
+                            <h3>Description</h3>
+                            <p>PROTECTS YOUR FOOT - Reinforced Heel, Dual Ankle Support, and Strengthened Toe Cap with
+                                gear shift pad protects foot and extends the durability of motorcycle boots<br><br>
+
+                                EASY TO WEAR – Quick Fasten & Release ATOP function combined with a pulling strap on the
+                                back of the sneaker allows you to get the sneaker on and off fast<br><br>
+
+                                VENTILATED – Perforated Leather in strategic areas of the motorcycle sneakers allow
+                                optimal air exchange during the ride and lets your foot breathe during a long day in
+                                office<br><br>
+
+                                ANTI-SLIP SOLE - Oil resistant and non-marking rubber sole with embedded steel shank for
+                                extra protection and strength<br><br>
+
+                                GREAT ON AND OFF BIKE - designed to give maximum comfort and protection on the bike but
+                                to look and feel as good as premium boots; classic black or brown color will complement
+                                your vintage motorcycle jacket<br></p>
+                        </div>
+
+                        <div class="product-color">
+                            <h4>Color</h4>
+                            <div class="color-layout">
+                                <div class="color-layout">
+                                    <input type="radio" id="blue" name="color" value="blue" class="color-input"
+                                        onclick="changeMainImage('blue')">
+                                    <label for="blue" class="blue"></label>
+
+                                    <input type="radio" id="white" name="color" value="white" class="color-input"
+                                        onclick="changeMainImage('white')">
+                                    <label for="white" class="white"></label>
+
+                                    <input type="radio" id="red" name="color" value="red" class="color-input"
+                                        onclick="changeMainImage('red')">
+                                    <label for="red" class="red"></label>
+
+                                    <input type="radio" id="gray" name="color" value="gray" class="color-input"
+                                        onclick="changeMainImage('gray')">
+                                    <label for="gray" class="gray"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="divider"></span>
+
+                        <div class="product-btn-group">
+                            <div class="button buy-now"><i class='bx bxs-zap'></i>Buy Now</div>
+                            <div class="button heart"><i class='bx bxs-heart'></i>Add to Wishlist</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Script -->
+    <script>
+        const sliderMainImage = document.getElementById("product-main-image"); // product container image
+        const sliderImageList = document.getElementsByClassName("image-list"); // image thumbnail group selection
+        const colorInputs = document.getElementsByClassName("color-input"); // color input buttons
+
+        for (let i = 0; i < sliderImageList.length; i++) {
+            sliderImageList[i].onclick = function () {
+                sliderMainImage.src = sliderImageList[i].src;
+                console.log(sliderMainImage.src);
+            };
+        }
+
+        for (let i = 0; i < colorInputs.length; i++) {
+            colorInputs[i].onclick = function () {
+                const color = colorInputs[i].value;
+                switch (color) {
+                    case "blue":
+                        sliderMainImage.src = "Accessories/Shoes/black shoes.jpg";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "white":
+                        sliderMainImage.src = "Accessories/Shoes/green shoes.jpg";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "red":
+                        sliderMainImage.src = "Accessories/Shoes/red shoes.jpg";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "gray":
+                        sliderMainImage.src = "Accessories/Shoes/yellow shoes.jpg";
+                        console.log(sliderMainImage.src);
+                        break;
+                    default:
+                        break;
+                }
+            };
+        }
+    </script>
+    <style>
+        table {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        table,
+        th,
+        td {
+            border: 3px solid white;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            text-align: center;
+            background-color: rgb(30, 30, 30);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: black;
+        }
+    </style>
+    </head>
+
+
+
+    <h2 style="text-align: center;">SHIMA Edge Vented, Motorcycle Shoes for Men Key Highlights</h2><br>
+
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Specification</th>
+        </tr>
+        <tr>
+            <td>Manufacturer</td>
+            <td>SHIMA</td>
+        </tr>
+        <tr>
+            <td>Model</td>
+            <td>Edge Vent Men</td>
+        </tr>
+        <tr>
+            <td>Weight</td>
+            <td>1.80kg</td>
+        </tr>
+        <tr>
+            <td>Dimensions</td>
+            <td>14.21 x 12.52 x 4.88 inches</td>
+        </tr>
+        <tr>
+            <td>Special Features</td>
+            <td>Breathable</td>
+        </tr>
+        <tr>
+            <td>Date First Available</td>
+            <td>July 8, 2022</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        p {
+            text-align: left;
+        }
+    </style>
+    </head>
+
+    <h2 style="text-align: left;">SHIMA Edge Vented, Motorcycle Shoes for Men Summary</h2>
+    <br>
+    <br>
+
+    <p>These motorcycle sneakers prioritize both protection and comfort for riders. Constructed with reinforced heel,
+        dual ankle support, and a durable toe cap with a gear shift pad, these boots safeguard your feet while extending
+        their longevity. Easy to slip on and off, they feature a Quick Fasten & Release ATOP function along with a rear
+        pulling strap. Perforated leather strategically incorporated into the design ensures optimal ventilation during
+        rides or long days, promoting breathability. The anti-slip sole, resistant to oil and non-marking, also includes
+        an embedded steel shank, providing added strength and stability. These boots are crafted to excel on the bike
+        while maintaining a sleek appearance that complements any vintage motorcycle jacket, available in classic black
+        or brown
+    </p>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!--footer -->
+    <div class="footer">
+        <div class="footer-section">
+            <h2>Why Choose Us?</h2>
+            <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and esteemed
+                bike
+                dealers, simplifying the process of acquiring a new bike. With an extensive range of bike choices
+                and
+                personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping experience.
+                <br>The
+                platform's user-friendly interface provides comprehensive details, expert insights, and secure
+                transactions.
+            </p>
+        </div>
+        <div class="footer-section">
+            <h2>Quick Links</h2>
+            <ul class="footer-list">
+                <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+                <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+                <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+                <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+                <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+                <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+                <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+                <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h2>Contact Us</h2>
+            <ul class="footer-list">
+                <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+                <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+    <hr style="color: white;">
+    <p style="color: white;" style="font-size: xx-small">@Ride-O-Holic. T&C applied. Made By Kunj, Naman, Snigdh,
+        Varenyam</p>
+
+        <script>
+            function redirectToWishlist() {
+                window.location.href = 'wishlist.html';
+            }
+        
+            function addToWishlist() {
+                // Get the product details
+                const productName = "SHIMA Edge Vented, Motorcycle Shoes for Men";
+                const productPrice = 3111;
+                const productImage = "Accessories/Shoes/main shoes image.jpg";
+        
+                // Check if a wishlist exists in local storage
+                let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        
+                // Check if the product is already in the wishlist
+                const existingProduct = wishlist.find(item => item.name === productName);
+        
+                if (!existingProduct) {
+                    // If the product is not in the wishlist, add it
+                    wishlist.push({
+                        name: productName,
+                        price: productPrice,
+                        image: productImage
+                    });
+        
+                    // Save the updated wishlist to local storage
+                    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+                }
+        
+                // Redirect to the wishlist page
+                redirectToWishlist();
+            }
+        
+            const buyNowButton = document.querySelector('.buy-now');
+            const addToWishlistButton = document.querySelector('.heart');
+        
+            if (buyNowButton) {
+                buyNowButton.addEventListener('click', redirectToWishlist);
+            }
+        
+            if (addToWishlistButton) {
+                addToWishlistButton.addEventListener('click', addToWishlist);
+            }
+        </script>
+
+</body>
+
+</html>

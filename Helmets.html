@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helmet</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="Helmets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navigation-bar">
+        <div class="company-name">
+            <h2>Ride-O-Holic</h2>
+        </div>
+        <ul class="nav-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Bikes</a>
+                <ul class="dropdown-content">
+                    <li><a href="royalenfeild.html">Royal Enfeild</a></li>
+                    <li><a href="TVS.html">TVS</a></li>
+                    <li><a href="yamaha.html">Yamaha</a></li>
+                    <li><a href="Hero.html">Hero</a></li>
+                    <li><a href="Bajaj.html">Bajaj</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="accesories.html">Accessories</a>
+              </li>
+              <li class="dropdown">
+                <a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="partnerships.html">Partnership</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="#">Login</a>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav-buttons">
+            <!-- ... Other navigation links ... -->
+            <li class="cart-icon" onclick="window.location.href = 'wishlist.html';">
+                <i class='bx bx-cart-alt'></i>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="heading-container">
+        <h2>ACCESSORIES > <span class="classic-heading">HELMET</span></h2>
+    </div>
+
+    <div class="container">
+        <div class="single-product">
+            <div class="row">
+                <div class="col-6">
+                    <div class="product-image">
+                        <div class="product-image-main">
+                            <img src="Accessories/Helmet/main.jpg" alt="" id="product-main-image">
+                        </div>
+                        <div class="product-image-slider">
+                            <img src="Accessories/Helmet/red.jpg" alt="" class="image-list">
+                            <img src="Accessories/Helmet/white.jpg" alt="" class="image-list">
+                            <img src="Accessories/Helmet/red.jpg" alt="" class="image-list">
+                            <img src="Accessories/Helmet/grey.jpg" alt="" class="image-list">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="product">
+                        <div class="product-title">
+                            <h2>Ignyte IGN-4 Trever ISI / DOT Certified Double Visor Full Face Helmet</h2>
+                        </div>
+                        <div class="product-rating">
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span class="review">( 176 Reviews )</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="offer-price">₹ 2,110</span>
+                            <span class="sale-price">Sizes Available - M, L, XL</span>
+                        </div>
+
+                        <div class="product-details">
+                            <h3>Description</h3>
+                            <p>Developed utilizing rider input from the world’s top helmet designers and enthusiasts.
+                                Dual Certification: DOT (FMVSS No. 218) and BIS ISI (IS 4151:2015) Pinlock 30 Anti-fog
+                                shield to prevent fogging. Removable & washable interior padding and cheek pads. Inner
+                                Sun Shield for protection against direct sunrays for rides during daytime.World first
+                                helmet with NACA Duct air flow technology, this air flow system is also used in
+                                aircraft's and super cars. The double NACA inlets above the shield allow the entry of
+                                the large volume of air inside the helmet to refresh and dehumidify the
+                                interior.Enhanced high-speed stability while reducing drag and negative forces.The NACA
+                                inlets on the back of the helmet allow quick extraction of the stale air.<br></p>
+                        </div>
+
+                        <div class="product-color">
+                            <h4>Color</h4>
+                            <div class="color-layout">
+                                <div class="color-layout">
+                                    <input type="radio" id="blue" name="color" value="blue" class="color-input"
+                                        onclick="changeMainImage('blue')">
+                                    <label for="blue" class="blue"></label>
+
+                                    <input type="radio" id="white" name="color" value="white" class="color-input"
+                                        onclick="changeMainImage('white')">
+                                    <label for="white" class="white"></label>
+
+                                    <input type="radio" id="red" name="color" value="red" class="color-input"
+                                        onclick="changeMainImage('red')">
+                                    <label for="red" class="red"></label>
+
+                                    <input type="radio" id="gray" name="color" value="gray" class="color-input"
+                                        onclick="changeMainImage('gray')">
+                                    <label for="gray" class="gray"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="divider"></span>
+
+                        <div class="product-btn-group">
+                            <div class="button buy-now"><i class='bx bxs-zap' onclick="addToWishlist()"></i>Buy Now
+                            </div>
+                            <div class="button heart"><i class='bx bxs-heart' onclick="addToWishlist()"></i>Add to
+                                Wishlist</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Script -->
+    <script>
+        const sliderMainImage = document.getElementById("product-main-image"); // product container image
+        const sliderImageList = document.getElementsByClassName("image-list"); // image thumbnail group selection
+        const colorInputs = document.getElementsByClassName("color-input"); // color input buttons
+
+        for (let i = 0; i < sliderImageList.length; i++) {
+            sliderImageList[i].onclick = function () {
+                sliderMainImage.src = sliderImageList[i].src;
+                console.log(sliderMainImage.src);
+            };
+        }
+
+        for (let i = 0; i < colorInputs.length; i++) {
+            colorInputs[i].onclick = function () {
+                const color = colorInputs[i].value;
+                switch (color) {
+                    case "blue":
+                        sliderMainImage.src = "Accessories/Helmet/white.jpg";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "white":
+                        sliderMainImage.src = "Accessories/Helmet/red.jpg";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "red":
+                        sliderMainImage.src = "Accessories/Helmet/grey.jpg";
+                        console.log(sliderMainImage.src);
+                        break;
+                    default:
+                        break;
+                }
+            };
+        }
+    </script>
+    <style>
+        table {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        table,
+        th,
+        td {
+            border: 3px solid white;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            text-align: center;
+            background-color: rgb(30, 30, 30);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: black;
+        }
+    </style>
+    </head>
+
+
+    <br><br><br>
+    <h2 style="text-align: center;">Ignyte IGN-4 Trever ISI / DOT Certified Double Visor Full Face Helmet Key Highlights
+    </h2><br>
+
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Specification</th>
+        </tr>
+        <tr>
+            <td>Manufacturer</td>
+            <td>Ignyte</td>
+        </tr>
+        <tr>
+            <td>Shape</td>
+            <td>Round oval, intermediate oval</td>
+        </tr>
+        <tr>
+            <td>Weight</td>
+            <td>2.66kg</td>
+        </tr>
+        <tr>
+            <td>Material</td>
+            <td>Acrylonitrile Butadiene Styrene (ABS)</td>
+        </tr>
+        <tr>
+            <td>Special Features</td>
+            <td>Clear Visor and Inner Smoke Sun Shield</td>
+        </tr>
+        <tr>
+            <td>Date First Available</td>
+            <td>September 15, 2022</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        p {
+            text-align: left;
+        }
+    </style>
+    </head>
+
+    <h2 style="text-align: left;">Ignyte IGN-4 Trever ISI / DOT Certified Double Visor Full Face Helmet Summary</h2>
+    <br>
+    <br>
+
+    <p>Developed utilizing rider input from the world’s top helmet designers and enthusiasts. Dual Certification: DOT
+        (FMVSS No. 218) and BIS ISI (IS 4151:2015) Pinlock 30 Anti-fog shield to prevent fogging. Removable & washable
+        interior padding and cheek pads. Inner Sun Shield for protection against direct sunrays for rides during
+        daytime.World first helmet with NACA Duct air flow technology, this air flow system is also used in aircraft's
+        and super cars. The double NACA inlets above the shield allow the entry of the large volume of air inside the
+        helmet to refresh and dehumidify the interior.Enhanced high-speed stability while reducing drag and negative
+        forces.The NACA inlets on the back of the helmet allow quick extraction of the stale air.
+    </p>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!--footer -->
+    <div class="footer">
+        <div class="footer-section">
+            <h2>Why Choose Us?</h2>
+            <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and esteemed
+                bike
+                dealers, simplifying the process of acquiring a new bike. With an extensive range of bike choices
+                and
+                personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping experience.
+                <br>The
+                platform's user-friendly interface provides comprehensive details, expert insights, and secure
+                transactions.
+            </p>
+        </div>
+        <div class="footer-section">
+            <h2>Quick Links</h2>
+            <ul class="footer-list">
+                <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+                <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+                <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+                <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+                <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+                <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+                <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+                <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h2>Contact Us</h2>
+            <ul class="footer-list">
+                <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+                <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+    <hr style="color: white;">
+    <p style="color: white;" style="font-size: xx-small">@Ride-O-Holic. T&C applied. Made By Kunj, Naman, Snigdh,
+        Varenyam</p>
+
+    <!-- ... Other HTML code ... -->
+
+    <script>
+        function redirectToWishlist() {
+            window.location.href = 'wishlist.html';
+        }
+    
+        function addToWishlist() {
+            // Get the product details
+            const productName = "Ignyte IGN-4 Trever ISI / DOT Certified Double Visor Full Face Helmet";
+            const productPrice = 2110;
+            const productImage = "Accessories/Helmet/main.jpg";
+    
+            // Check if a wishlist exists in local storage
+            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    
+            // Check if the product is already in the wishlist
+            const existingProduct = wishlist.find(item => item.name === productName);
+    
+            if (!existingProduct) {
+                // If the product is not in the wishlist, add it
+                wishlist.push({
+                    name: productName,
+                    price: productPrice,
+                    image: productImage
+                });
+    
+                // Save the updated wishlist to local storage
+                localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            }
+    
+            // Redirect to the wishlist page
+            redirectToWishlist();
+        }
+    
+        const buyNowButton = document.querySelector('.buy-now');
+        const addToWishlistButton = document.querySelector('.heart');
+    
+        if (buyNowButton) {
+            buyNowButton.addEventListener('click', redirectToWishlist);
+        }
+    
+        if (addToWishlistButton) {
+            addToWishlistButton.addEventListener('click', addToWishlist);
+        }
+    </script>
+
+
+    <!-- ... Other HTML code ... -->
+
+</body>
+
+</html>

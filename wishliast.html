@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        #wishlist-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .wishlist-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .wishlist-item img {
+            max-width: 100px;
+            max-height: 100px;
+            margin-right: 10px;
+        }
+
+        .wishlist-item button {
+            background-color: #333;
+            color: #fff;
+            padding: 8px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Wishlist</h1>
+    </header>
+
+    <div id="wishlist-container">
+        <form id="wishlist-form">
+            <label for="item">Add Item:</label>
+            <input type="text" id="item" name="item" placeholder="Item name" required>
+            <input type="submit" value="Add to Wishlist">
+        </form>
+
+        <div id="wishlist">
+            <!-- Wishlist items will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const wishlistForm = document.getElementById('wishlist-form');
+            const wishlistContainer = document.getElementById('wishlist');
+            
+            wishlistForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                
+                const itemName = document.getElementById('item').value;
+                
+                if (itemName) {
+                    addItemToWishlist(itemName);
+                    wishlistForm.reset();
+                }
+            });
+            
+            function addItemToWishlist(itemName) {
+                const wishlistItem = document.createElement('div');
+                wishlistItem.classList.add('wishlist-item');
+                
+                wishlistItem.innerHTML = `
+                    <span>${itemName}</span>
+                    <button onclick="removeItem(this)">Remove</button>
+                `;
+                
+                wishlistContainer.appendChild(wishlistItem);
+            }
+            
+            window.removeItem = function (button) {
+                const wishlistItem = button.parentNode;
+                wishlistContainer.removeChild(wishlistItem);
+            };
+        });
+    </script>
+</body>
+
+</html>

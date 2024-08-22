@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yamaha</title>
+    <link rel="stylesheet" href="royalenfeild.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!--navigation bar-->
+    <nav class="navigation-bar">
+        <div class="company-name">
+            <h2>Ride-O-Holic</h2>
+        </div>
+        <ul class="nav-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+        <a href="#">Bikes</a>
+        <ul class="dropdown-content">
+          <li><a href="royalenfeild.html">Royal Enfeild</a></li>
+          <li><a href="TVS.html">TVS</a></li>
+          <li><a href="yamaha.html">Yamaha</a></li>
+          <li><a href="Hero.html">Hero</a></li>
+          <li><a href="Bajaj.html">Bajaj</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="accesories.html">Accessories</a>
+      </li>
+      <li class="dropdown">
+        <a href="services.html">Services</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Partnership</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+             
+            <li class="dropdown">
+                <a href="#">Login</a>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="re-motorcycles">
+        <h2 style="color: white; margin-left: 20px">Motorcycles</h2>
+        <button class="control-button" onclick="showSlide(1)">MT 15</button>
+        <button class="control-button" onclick="showSlide(2)">R15 V4</button>
+        <button class="control-button" onclick="showSlide(3)">R15 M</button>
+        <button class="control-button" onclick="showSlide(4)">FZ-S V4</button>
+        <button class="control-button" onclick="showSlide(5)">FZ-X</button>
+    </div>
+    <!--slideshow images-->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="assets/MT_15.jpg" style="width:100%">
+                <div class="text">
+                    <button class="explore-button" onclick="window.location.href = 'mt15.html';">Explore MT 15</button>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/R15_V4.jpg" style="width:100%">
+                <div class="text">
+                    <button class="explore-button" onclick="window.location.href = 'r15v4.html';">Explore R15 V4</button>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/R15_M.jpg" style="width:100%">
+                <div class="text">
+                    <button class="explore-button" onclick="window.location.href = 'r15m.html';">Explore R15 M</button>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/FZS_V4.jpg" style="width:100%">
+                <div class="text">
+                    <button class="explore-button" onclick="window.location.href = 'fzs.html';">Explore FZ-S V4</button>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/FZX.jpg" style="width:100%">
+                <div class="text">
+                    <button class="explore-button" onclick="window.location.href = 'fzx.html';">Explore FZ-X </button>
+                </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+
+            function showSlide(slideNumber) {
+                showSlides(slideNumber);
+            }
+
+            // Updated showSlide function to link buttons to images
+            function showSlide(slideNumber) {
+                currentSlide(slideNumber);
+            }
+        </script>
+
+        <div class="royal-enfield">
+            <h1>Yamaha Motorcycles</h1>
+            <p>Yamaha is a revered motorcycle brand renowned for its dynamic innovation and a legacy that has shaped the
+                motorcycle industry since its inception. Established in Japan, Yamaha's history dates back to its
+                foundation, and over the years, it has established itself as a global leader in the world of
+                motorcycles.</p>
+            <p>From its early beginnings crafting musical instruments, Yamaha transitioned its expertise into creating
+                motorcycles that are celebrated for their cutting-edge technology and high-performance engineering. The
+                brand's commitment to pushing the boundaries of what's possible has resulted in a lineup of motorcycles
+                that cater to a wide range of riders, from sports enthusiasts to adventure seekers.</p>
+            <p>Yamaha motorcycles are known not only for their impressive speed and power but also for their distinctive
+                design language. The brand's dedication to innovation is evident in the advanced features and
+                technologies integrated into their bikes, enhancing both performance and rider experience.</p>
+            <p>Yamaha's legacy extends beyond the asphalt, as the brand has also made significant contributions to
+                motorsports, showcasing its engineering prowess on racetracks around the globe. This racing heritage
+                trickles down to their production motorcycles, ensuring that every Yamaha rider can feel the
+                exhilaration of a race-ready machine.</p>
+            <p>In essence, Yamaha motorcycles embody a harmonious blend of innovation, performance, and style. With a
+                history rooted in pushing boundaries and a commitment to delivering excitement on two wheels, Yamaha
+                continues to inspire riders to embark on thrilling journeys that redefine the art of motorcycling.</p>
+        </div>
+         <div class="re-buttons">
+            <div class="icon-button" onclick="window.location.href='bookatestride.html';">
+                <i class="fa fa-motorcycle"></i>
+                <span>Book a Ride</span>
+            </div>
+            <div class="icon-button" onclick="window.location.href='bookaservice.html';">
+                <a> <i class="fa fa-gears"></i>
+                    <span>Book a Service</span></a>
+
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="faq-container">
+                <h2>FREQUENTLY ASKED QUESTIONS</h2>
+                <div class="faq-item">
+                    <div class="faq-question">When was Yamaha Motor Co., Ltd founded?</div>
+                    <div class="faq-answer">It was founded on July 1st, 1955.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Where is the Yamaha Motor's head office located?</div>
+                    <div class="faq-answer">The head office locates at 2500 Shingai, Iwata, Shizuoka, Japan.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Where can I get information on Yamaha Motor's future products, etc. that
+                        haven't been released to the public?</div>
+                    <div class="faq-answer">Regarding with Yamaha Motor's future products that haven't been released to
+                        the public, at the time of the product release, we release the information via Yamaha Motor's
+                        Web sites and mass media such as television, printed materials etc. of relevant countries. We
+                        would like to refrain from making any comments on the information of our future product planning
+                        prior to its release to the public.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">I would like to know Yamaha Motor's Career opportunity information.</div>
+                    <div class="faq-answer">Various options of job opportunities which will help in developing your experiences and expertise are available in each region.
+                        Please look for career opportunity information in the Yamaha Motor Web sites of your country.</div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', () => {
+                    item.classList.toggle('open');
+                });
+            });
+        </script>
+        <hr />
+        <!--footer -->
+        <div class="footer">
+            <div class="footer-section">
+                <h2>Why Choose Us?
+                </h2>
+                <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and esteemed
+                    bike
+                    dealers, simplifying the process of acquiring a new bike. With an extensive range of bike choices
+                    and
+                    personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping experience.
+                    <br>The
+                    platform's user-friendly interface provides comprehensive details, expert insights, and secure
+                    transactions.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+                    <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+                    <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+                    <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+                    <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+                    <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+                    <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+                    <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Contact Us</h2>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <hr style="color: white;">
+        <p style="color: white;" style="font-size: smaller;">@Ride-O-Holic. T&C applied. Made By Kunj, Naman, Snigdh,
+            Varenyam</p>
+
+
+</body>
+
+</html>

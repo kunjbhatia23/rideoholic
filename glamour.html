@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glamour Xtec</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="glamour.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navigation-bar">
+        <div class="company-name">
+            <h2>Ride-O-Holic</h2>
+        </div>
+        <ul class="nav-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+        <a href="#">Bikes</a>
+        <ul class="dropdown-content">
+          <li><a href="royalenfeild.html">Royal Enfeild</a></li>
+          <li><a href="TVS.html">TVS</a></li>
+          <li><a href="yamaha.html">Yamaha</a></li>
+          <li><a href="Hero.html">Hero</a></li>
+          <li><a href="Bajaj.html">Bajaj</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="accesories.html">Accessories</a>
+      </li>
+      <li class="dropdown">
+        <a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="partnerships.html">Partnership</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+             
+            <li class="dropdown">
+                <a href="#">Login</a>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="heading-container">
+        <h2>MOTORCYCLES > <span class="classic-heading">GLAMOUR XTEC</span></h2>
+    </div>
+
+    <div class="container">
+        <div class="single-product">
+            <div class="row">
+                <div class="col-6">
+                    <div class="product-image">
+                        <div class="product-image-main">
+                            <img src="Glamour/20211116082826_Glamour_1.jpg" alt=""
+                                id="product-main-image">
+                        </div>
+                        <div class="product-image-slider">
+                            <img src="Glamour/20211116082826_Glamour_1.jpg" alt="" class="image-list">
+
+                            <img src="Glamour/hero-select-model-candy-blazing-red-1669286013198.webp" alt=""
+                                class="image-list">
+                            <img src="Glamour/hero-select-model-nezus-blue-1669284325813.webp" alt=""
+                                class="image-list">
+                            <img src="Glamour/hero-select-model-matte-axis-grey-1669286015234.webp"
+                                alt="" class="image-list">
+                            <img src="Glamour/hero-select-model-glossy-black-1669286017363.webp" alt=""
+                                class="image-list">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="product">
+                        <div class="product-title">
+                            <h2>Hero Glamour Xtec</h2>
+                        </div>
+                        <div class="product-rating">
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span class="review">( 84 Reviews )</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="offer-price">₹ 1,01,403</span>
+                            <span class="sale-price">On-Road Price</span>
+                        </div>
+
+                        <div class="product-details">
+                            <h3>Description</h3>
+                            <p>The Hero Glamour Xtec is a commuter motorcycle that offers a harmonious blend of style,
+                                technology, and practicality. Powered by a refined 125cc engine, it delivers a balance
+                                of performance and fuel efficiency, making it a suitable choice for daily commuting and
+                                urban rides.
+
+                                The Glamour Xtec features a contemporary design with sharp lines and a sleek LED
+                                headlamp. Its key highlight is the inclusion of technological advancements, such as
+                                Bluetooth connectivity and turn-by-turn navigation through the Hero Connect app,
+                                offering convenience and connectivity on the go.
+
+                                With a comfortable and upright riding posture, combined with telescopic front forks and
+                                twin shock absorbers at the rear, the Glamour Xtec offers a smooth and comfortable ride.
+                                It's a well-rounded motorcycle, ideal for riders seeking a stylish and tech-savvy
+                                commuter with a touch of modernity in the 125cc segment.</p>
+                        </div>
+
+                        <div class="product-color">
+                            <h4>Color</h4>
+                            <div class="color-layout">
+                                <div class="color-layout">
+                                    <input type="radio" id="blue" name="color" value="blue" class="color-input"
+                                        onclick="changeMainImage('blue')">
+                                    <label for="blue" class="blue"></label>
+
+                                    <input type="radio" id="white" name="color" value="white" class="color-input"
+                                        onclick="changeMainImage('white')">
+                                    <label for="white" class="white"></label>
+
+                                    <input type="radio" id="red" name="color" value="red" class="color-input"
+                                        onclick="changeMainImage('red')">
+                                    <label for="red" class="red"></label>
+
+                                    <input type="radio" id="gray" name="color" value="gray" class="color-input"
+                                        onclick="changeMainImage('gray')">
+                                    <label for="gray" class="gray"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="divider"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Script -->
+    <script>
+        const sliderMainImage = document.getElementById("product-main-image"); // product container image
+        const sliderImageList = document.getElementsByClassName("image-list"); // image thumbnail group selection
+        const colorInputs = document.getElementsByClassName("color-input"); // color input buttons
+
+        for (let i = 0; i < sliderImageList.length; i++) {
+            sliderImageList[i].onclick = function () {
+                sliderMainImage.src = sliderImageList[i].src;
+                console.log(sliderMainImage.src);
+            };
+        }
+
+        for (let i = 0; i < colorInputs.length; i++) {
+            colorInputs[i].onclick = function () {
+                const color = colorInputs[i].value;
+                switch (color) {
+                    case "blue":
+                        sliderMainImage.src = "Glamour/hero-select-model-candy-blazing-red-1669286013198.webp";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "white":
+                        sliderMainImage.src = "Glamour/hero-select-model-nezus-blue-1669284325813.webp";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "red":
+                        sliderMainImage.src = "Glamour/hero-select-model-matte-axis-grey-1669286015234.webp";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "gray":
+                        sliderMainImage.src = "Glamour/hero-select-model-glossy-black-1669286017363.webp";
+                        console.log(sliderMainImage.src);
+                        break;
+                    default:
+                        break;
+                }
+            };
+        }
+    </script>
+    <style>
+        table {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        table,
+        th,
+        td {
+            border: 3px solid white;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            text-align: center;
+            background-color: rgb(30, 30, 30);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: black;
+        }
+    </style>
+    </head>
+
+    <body>
+
+         <div class="re-buttons">
+            <div class="icon-button" onclick="window.location.href='bookatestride.html';">
+                <i class="fa fa-motorcycle"></i>
+                <span>Book a Ride</span>
+            </div>
+            <div class="icon-button" onclick="window.location.href='bookaservice.html';">
+                <a> <i class="fa fa-gears"></i>
+                    <span>Book a Service</span></a>
+
+            </div>
+        </div>
+
+        <h2 style="text-align: center;">Glamour Xtec Key Highlights</h2><br>
+
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Specification</th>
+            </tr>
+            <tr>
+                <td>Engine Capacity</td>
+                <td>124.7 cc</td>
+            </tr>
+            <tr>
+                <td>Mileage - ARAI</td>
+                <td>51.5 kmpl</td>
+            </tr>
+            <tr>
+                <td>Transmission</td>
+                <td>5 Speed Manual</td>
+            </tr>
+            <tr>
+                <td>Kerb Weight</td>
+                <td>122 kg</td>
+            </tr>
+            <tr>
+                <td>Fuel Tank Capacity</td>
+                <td>10 litres</td>
+            </tr>
+            <tr>
+                <td>Seat Height</td>
+                <td>798 mm</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            p {
+                text-align: left;
+            }
+        </style>
+        </head>
+
+        <h2 style="text-align: left;">Hero Glamour Xtec Summary</h2>
+        <br>
+        <br>
+
+        <p>Hero Glamour Xtec is a mileage bike available in 2 variants and 4 colours. Glamour Xtec price starts at Rs.
+            1,01,403 in India with top variant price starting from Rs. 1,06,414. The Hero Glamour Xtec is powered by
+            124.7cc BS6 engine which develops a power of 10.72 bhp and a torque of 10.6 Nm. With both front and rear
+            drum brakes, Hero Glamour Xtec comes up with combined braking system of both wheels. This Glamour Xtec bike
+            weighs 122 kg and has a fuel tank capacity of 10 liters.<br><br>
+
+            The Hero Glamour Xtech is a modern version of the standard Xtec. This model gets updated colours and some
+            new cool features that have made the motorcycle more aspirational.<br><br>
+
+            One of the major additions to this bike is the fully digital instrument cluster. Due to this, the rider will
+            be able to access SMS and call alerts as there's Bluetooth integration. There's also a built-in USB phone
+            charger that makes the bike more practical. The company also claims that the headlight is brighter. The new
+            Glamour XTec also features a bank angle sensor that turns off the engine in an event of a fall. Cosmetic
+            upgrades include a new matte black paint with silver accents, 3D branding, and silver rim tapes.<br><br>
+
+            In terms of performance, the five-speed 124.7cc BS6 engine of Hero Glamour makes 10.7bhp of power and 10.6Nm
+            of peak torque. The motorcycle comes up with an Idle Stop-Start system that is aimed to improve fuel
+            efficiency. The motorcycle is built around a diamond frame, with telescopic forks at the front and hydraulic
+            shock absorbers at the back. The braking power comes from 130mm drum brakes on both 18-inch alloy wheels
+            while a 240mm disc brake is available as an option. The safety net includes CBS tech that Hero MotoCorp
+            calls Integrated Braking System.<br><br>
+
+            The Glamour competes with the Honda SP 125 and the Bajaj Pulsar 125. The bike is currently available in
+            black, red and grey paint schemes.</p>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!--footer -->
+        <div class="footer">
+            <div class="footer-section">
+                <h2>Why Choose Us?</h2>
+                <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and esteemed
+                    bike
+                    dealers, simplifying the process of acquiring a new bike. With an extensive range of bike choices
+                    and
+                    personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping experience.
+                    <br>The
+                    platform's user-friendly interface provides comprehensive details, expert insights, and secure
+                    transactions.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+                    <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+                    <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+                    <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+                    <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+                    <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+                    <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+                    <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Contact Us</h2>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <hr style="color: white;">
+        <p style="color: white;" style="font-size: xx-small">@Ride-O-Holic. T&C applied. Made By Kunj, Naman, Snigdh,
+            Varenyam</p>
+
+
+    </body>
+
+</html>

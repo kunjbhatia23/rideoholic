@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Webleb - Log In</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <form class="section" action="/your-login-endpoint" method="post">
+    <div class="container">
+      <div class="row full-height justify-content-center">
+        <div class="col-12 text-center align-self-center py-5">
+          <div class="section pb-5 pt-5 pt-sm-2 text-center">
+            <h4 class="mb-3 pb-3">Log In</h4>
+            <div class="form-group">
+              <input type="email" class="form-style" name="email" placeholder="Email">
+              <i class="input-icon uil uil-at"></i>
+            </div> 
+            <div class="form-group mt-2">
+              <input type="password" class="form-style" name="password" placeholder="Password">
+              <i class="input-icon uil uil-lock-alt"></i>
+            </div>
+            <button type="submit" class="btn mt-4">Log In</button>
+            <p class="mb-0 mt-4 text-center"><a href="https://www.web-leb.com/code" class="link">Forgot your password?</a></p>
+            <a href="/backend/views/register.hbs" class="btn mt-4">Register</a> <!-- Register Button -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</body>
+</html>

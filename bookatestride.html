@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>book your test ride</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="bookatestride.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center" style="margin:20px;">
+            <div class="col-lg-6 col-md-8 login-box">
+                <div class="col-lg-12 login-title">
+                    BOOK A TEST RIDE
+                </div>
+                <div class="col-lg-12 login-form">
+                    <form action="store_data.php" method="post">
+                        <div class="form-group">
+                            <label class="form-control-label">Full name</label>
+                            <input type="text" class="form-control" name="full_name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label">Email</label>
+                            <input type="text" class="form-control" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label">Phone number</label>
+                            <input type="text" class="form-control" name="phone_number">
+                        </div>
+                        <!-- Inside the login-form div, add the new fields -->
+                        <div class="form-group">
+                            <label class="form-control-label" for="pincode">Pincode</label>
+                            <input type="text" class="form-control" id="pincode" name="pincode">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label" for="bike-company" >Bike Company</label>
+                            <select class="form-control" id="bike-company" onchange="getDealers(this.value)" name="bike_company">
+                                <option value="company1">Royal Enfeild</option>
+                                <option value="company2">TVS</option>
+                                <option value="company1">Bajaj</option>
+                                <option value="company1">Hero</option>
+                                <option value="company1">Yamaha</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label" for="dealer">Select Your Dealer</label>
+                            <select class="form-control" id="dealer" name="dealer">
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+
+                        <div class="col-12 login-btm login-button justify-content-center d-flex">
+                            <button type="submit" class="btn btn-outline-primary">Register</button>
+                        </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <script>
+        function getDealers() {
+            const bikeCompany = document.getElementById('bike-company').value;
+
+            fetch(`get_dealers.php?bike_company=${bikeCompany}`)
+                .then(response => response.json())
+                .then(data => {
+                    const dealerSelect = document.getElementById('dealer');
+                    dealerSelect.innerHTML = ''; // Clear previous options
+
+                    data.forEach(dealer => {
+                        const option = document.createElement('option');
+                        option.value = dealer.id;
+                        option.text = dealer.name;
+                        dealerSelect.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    
+    </script>
+</body>
+
+</html>

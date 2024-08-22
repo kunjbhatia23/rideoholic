@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ride-O-Holic</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <!--navigation bar-->
+  <nav class="navigation-bar">
+    <div class="company-name">
+      <h2>Ride-O-Holic</h2>
+    </div>
+    <ul class="nav-buttons">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Bikes</a>
+        <ul class="dropdown-content">
+          <li><a href="royalenfeild.html">Royal Enfeild</a></li>
+          <li><a href="TVS.html">TVS</a></li>
+          <li><a href="yamaha.html">Yamaha</a></li>
+          <li><a href="Hero.html">Hero</a></li>
+          <li><a href="Bajaj.html">Bajaj</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="accesories.html">Accessories</a>
+      </li>
+      <li class="dropdown">
+        <a href="services.html">Services</a></li>
+        
+      <li><a href="events.html">Events</a></li>
+      <li><a href="partnerships.html">Partnership</a></li>
+      <li><a href="AboutUs.html">About Us</a></li>
+      <li class="dropdown">
+        <a href="#">Login</a>
+        <ul class="dropdown-content">
+          <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+        </ul>
+      </li>
+      <li id="welcomeMessageContainer"></li>
+    </ul>
+  </nav>
+  <!--slideshow images-->
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="assets/NEW_BIKE_Royal_Enfield.jpg" style="width:100%">
+        <div class="text">
+          <h2>Trending</h2>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="assets/India_Bike_Week_Dec_1__2_Goa.jpg" style="width:100%">
+        <div class="text">
+          <h2>Events</h2>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="assets/Bike_Washing_Service.jpg" style="width:100%">
+        <div class="text">
+          <h2>Washing Services</h2>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="assets/Partner_Image_JS_Films.jpg" style="width:100%">
+        <div class="text">
+          <h2>Partnerships</h2>
+        </div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+
+    <!--companies-->
+    <div class="companies">
+      <h1> COMPANIES</h1>
+      <button onclick="window.location.href = 'royalenfeild.html';"><img src="assets/royal_enfield.jpg" /></button>
+      <button onclick="window.location.href = 'TVS.html';"><img src="assets/TVS.jpg" /></button>
+      <button onclick="window.location.href = 'yamaha.html';"><img src="assets/Yamaha.jpg" /></button>
+      <button onclick="window.location.href = 'Hero.html';"><img src="assets/Hero.jpg" /></button>
+      <button onclick="window.location.href = 'Bajaj.html';"><img src="assets/Bajaj.jpg" /></button>
+    </div>
+    <br />
+    
+  
+
+    <div class="header">
+      <h1 style="color: white;">Gallery</h1>
+      <p style="color: white;" style="font-size: xx-large;">Ride-O-holic: Transforming Bike Purchases</p>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="row">
+      <div class="column">
+        <img src="assets/Leh-Ladakh-bike-trip-from-Srinagar-1.png" style="width:100%">
+        <img src="assets/0e4062000e5ed0aa78d751ab94f049cd_original.png" style="width:100%">
+        <img src="assets/0H3A7125-scaled.png" style="width:100%">
+        <img src="assets/0H3A7292-scaled.png" style="width:100%">
+        <img src="assets/download (1).jpg" style="width:100%">
+        <img src="assets/637f4803da4c7_720x540.png" style="width:100%">
+        <img src="assets/47955-1595225880-df4f0cc0-970f-47ac-82de-eeb740678b66.png" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="assets/203778-untitled-design-2021-09-26t192022892.png" style="width:100%">
+        <img src="assets/bike_offer4.png" style="width:100%">
+        <img src="assets/bike2.png" style="width:100%">
+        <img src="assets/bikers-e1497856887518.png" style="width:100%">
+        <img src="/assets/carousel-bg-2.png" style="width:100%">
+        <img src="assets/GH18686.png" style="width:100%">
+        <img src="assets/thunderbird.jpeg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="assets/jpeg-optimizer-homepage-crosslink-card-configure-770x513.png" style="width:100%">
+        <img src="assets/khandelwal-motors-kalyan-puri-delhi-motorcycle-dealers-hero-xp6b1.png" style="width:100%">
+        <img src="assets/Leh-Ladakh-bike-trip-from-Srinagar-1.png" style="width:100%">
+        <img src="/assets/maxresdefault.png" style="width:100%">
+        <img src="assets/VDP02715-scaled.png" style="width:100%">
+        <img src="assets/download (2).jpg" style="width:100%">
+        <img src="assets/download (3).jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="assets/download (4).jpg" style="width:100%">
+        <img src="assets/download (5).jpg" style="width:100%">
+        <img src="assets/download (6).jpg" style="width:100%">
+        <img src="assets/download (7).jpg" style="width:100%">
+        <img src="assets/download.jpg" style="width:100%">
+        <img src="assets/yamaha 1.jpg" style="width:100%">
+        <img src="assets/thunderbird1.jpeg" style="width:100%">
+        <img src="assets/thunderbird2.jpeg" style="width:100%">
+      </div>
+    </div>
+    <hr style="color: white;" />
+
+
+    <!--footer -->
+    <div class="footer">
+      <div class="footer-section">
+        <h2>Why Choose Us?</h2>
+        <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and esteemed bike
+          dealers, simplifying the process of acquiring a new bike. With an extensive range of bike choices and
+          personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping experience. <br>The
+          platform's user-friendly interface provides comprehensive details, expert insights, and secure transactions.
+        </p>
+      </div>
+      <div class="footer-section">
+        <h2>Quick Links</h2>
+        <ul class="footer-list">
+          <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+          <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+          <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+          <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+          <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+          <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+          <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+          <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2>Contact Us</h2>
+        <ul class="footer-list">
+          <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+          <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+        </ul>
+      </div>
+
+    </div>
+    <hr style="color: white;">
+    <p style="color: white;" style="font-size: xx-small">@Ride-O-Holic. T&C applied. Made By Kunj, Naman, Snigdh,
+      Varenyam</p>
+    <!-- Inside your main page's script tag -->
+</body>
+
+</html>

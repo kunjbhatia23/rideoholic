@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Enfield</title>
+  <link rel="stylesheet" href="royalenfeild.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <!--navigation bar-->
+  <nav class="navigation-bar">
+    <div class="company-name">
+      <h2>Ride-O-Holic</h2>
+    </div>
+    <ul class="nav-buttons">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Bikes</a>
+        <ul class="dropdown-content">
+          <li><a href="royalenfeild.html">Royal Enfeild</a></li>
+          <li><a href="TVS.html">TVS</a></li>
+          <li><a href="yamaha.html">Yamaha</a></li>
+          <li><a href="Hero.html">Hero</a></li>
+          <li><a href="Bajaj.html">Bajaj</a></li>
+        </ul>
+        <li class="dropdown">
+          <a href="accesories.html">Accessories</a>
+        </li>
+        <li class="dropdown">
+          <a href="services.html">Services</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="partnerships.html">Partnership</a></li>
+      <li><a href="AboutUs.html">About Us</a></li>
+            <li class="dropdown">
+        <a href="#">Login</a>
+        <ul class="dropdown-content">
+          <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+          
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="re-motorcycles">
+    <h2 style="color: white; margin-left: 20px">Motorcycles</h2>
+    <button class="control-button" onclick="showSlide(1)">Classic 350</button>
+    <button class="control-button" onclick="showSlide(2)">Hunter 350</button>
+    <button class="control-button" onclick="showSlide(3)">Meteor 350</button>
+    <button class="control-button" onclick="showSlide(4)">Continental GT 650</button>
+    <button class="control-button" onclick="showSlide(5)">Himalayan 400</button>
+  </div>
+  <!--slideshow images-->
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="assets/classic_350.jpg" style="width:100%">
+        <div class="text">
+          <button class="explore-button" onclick="window.location.href = 'classic350.html';">Explore classic 350</button>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="assets/hunter_350.jpg" style="width:100%">
+        <div class="text">
+          <li class="explore-button" onclick="window.location.href = 'HUNTER350.html';">Explore Hunter 350</li>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="assets/meteor_350.jpg" style="width:100%">
+        <div class="text">
+          <button class="explore-button" onclick="window.location.href = 'meteor350.html';">Explore Meteor 350</button>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="assets/continental_gt_650.jpg" style="width:100%">
+        <div class="text">
+          <button class="explore-button" onclick="window.location.href = 'continentalgt650.html';">Explore Continental GT 650</button>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="assets/himalayan_400_hd.jpg" style="width:100%">
+        <div class="text">
+          <button class="explore-button" onclick="window.location.href = 'himalayan400.html';">Explore Himalayan 400 </button>
+        </div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+
+      function showSlide(slideNumber) {
+        showSlides(slideNumber);
+      }
+
+      // Updated showSlide function to link buttons to images
+      function showSlide(slideNumber) {
+        currentSlide(slideNumber);
+      }
+    </script>
+
+    <div class="royal-enfield">
+      <h1 style="left: auto;">Royal Enfield</h1>
+      <p>Royal Enfield is a legendary motorcycle brand known for its classic design and rich history. Founded in the
+        United Kingdom in 1901, Royal Enfield has a heritage that spans over a century. The brand has become synonymous
+        with rugged, retro-styled motorcycles that combine timeless aesthetics with modern engineering.</p>
+      <p>From its early days producing motorcycles for both civilians and the military, Royal Enfield has evolved into a
+        global icon cherished by motorcycle enthusiasts. The distinct thumping sound of its single-cylinder engines and
+        the vintage charm of its designs make every Royal Enfield ride a journey through history.</p>
+    </div>
+     <div class="re-buttons">
+            <div class="icon-button" onclick="window.location.href='bookatestride.html';">
+                <i class="fa fa-motorcycle"></i>
+                <span>Book a Ride</span>
+            </div>
+            <div class="icon-button" onclick="window.location.href='bookaservice.html';">
+                <a> <i class="fa fa-gears"></i>
+                    <span>Book a Service</span></a>
+
+            </div>
+        </div>
+
+    <div class="faq">
+      <div class="faq-container">
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        <div class="faq-item">
+          <div class="faq-question">Which Royal Enfield motorcycle is perfect for me?</div>
+          <div class="faq-answer">Our motorcycles differ in many ways as each offers a different experience, while
+            providing the signature Royal Enfield riding pleasure. You can explore our range, book a test ride and
+            select the motorcycle that’s best for you by walking in to a Royal Enfield store near you.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Where can I buy a Royal Enfield motorcycle from?</div>
+          <div class="faq-answer">Across the world, we have stores in over 50 countries. They are well equipped to
+            provide you support and guidance to ride a Royal Enfield motorcycle of your choice. All you need to do is
+            walk in to a Royal Enfield store near you.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What is the frame number of my motorcycle?</div>
+          <div class="faq-answer">The frame number of your Royal Enfield motorcycle is punched on the steering head on the right side.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What is the engine number of my motorcycle?</div>
+          <div class="faq-answer">The engine number of your Royal Enfield motorcycle is punched on the left side of the crank case.</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const faqItems = document.querySelectorAll('.faq-item');
+
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+
+        question.addEventListener('click', () => {
+          item.classList.toggle('open');
+        });
+      });
+    </script>
+    <hr />
+    <!--footer -->
+    <div class="footer">
+      <div class="footer-section">
+        <h2>Why Choose Us?
+        </h2>
+        <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and esteemed bike
+          dealers, simplifying the process of acquiring a new bike. With an extensive range of bike choices and
+          personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping experience. <br>The
+          platform's user-friendly interface provides comprehensive details, expert insights, and secure transactions.
+        </p>
+      </div>
+      <div class="footer-section">
+        <h2>Quick Links</h2>
+        <ul class="footer-list">
+          <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+          <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+          <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+          <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+          <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+          <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+          <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+          <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2>Contact Us</h2>
+        <ul class="footer-list">
+          <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+          <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+        </ul>
+      </div>
+
+    </div>
+    <hr style="color: white;">
+    <p style="color: white;" style="font-size: smaller;">@Ride-O-Holic. T&C applied. Made By Kunj, Naman, Snigdh,
+      Varenyam</p>
+
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cutomercard.css">
+    <title>User Card Animation</title>
+</head>
+<body>
+    <div id="formContainer"></div>
+
+    <div class="user-card" id="userCard">
+        <div class="user-info">
+            <img src="user-logo.png" alt="User Logo" id="userLogo">
+            <h3 id="userName"></h3>
+            <p id="bookingStatus"></p>
+        </div>
+        <button onclick="closeUserCard()">Close</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Perform an AJAX request to fetch user data
+            const xhr = new XMLHttpRequest();
+            
+            document.addEventListener("mousemove", function (event) {
+                // Adjust the threshold value as needed
+                if (event.clientX > window.innerWidth - 20) {
+                    openUserCard();
+                } else {
+                    closeUserCard(); // Close the card if not in the threshold
+                }
+            });
+        
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const userData = JSON.parse(xhr.responseText);
+        
+                    // Check if userData is not empty before updating the HTML
+                    if (Object.keys(userData).length > 0) {
+                        document.getElementById("userName").innerText = userData.fullname;
+
+                        // Determine the booking status based on the available data
+                        let bookingStatus = "";
+
+                        if (userData.testRideData && userData.testRideData.bookingMessage) {
+                            bookingStatus = userData.testRideData.bookingMessage;
+                        } else if (userData.serviceData && userData.serviceData.bookingMessage) {
+                            bookingStatus = userData.serviceData.bookingMessage;
+                        }
+
+                        document.getElementById("bookingStatus").innerText = bookingStatus;
+                    } else {
+                        // Handle case when no data is received
+                        console.error("No user data received.");
+                    }
+                }
+            };
+        
+            // Adjust the URL to your server-side script
+            xhr.open("GET", "get_user_data.php", true);
+            xhr.send();
+        });
+        
+        function openUserCard() {
+            document.getElementById("userCard").style.right = "0";
+        }
+        
+        function closeUserCard() {
+            document.getElementById("userCard").style.right = "-300px";
+        }
+    </script>
+</body>
+</html>

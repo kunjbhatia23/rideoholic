@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partnerships</title>
+    <link rel="stylesheet" href="partnerships.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!--navigation bar-->
+    <nav class="navigation-bar">
+        <div class="company-name">
+            <h2>Ride-O-Holic</h2>
+        </div>
+        <ul class="nav-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Bikes</a>
+                <ul class="dropdown-content">
+                    <li><a href="royalenfeild.html">Royal Enfield</a></li>
+                    <li><a href="TVS.html">TVS</a></li>
+                    <li><a href="yamaha.html">Yamaha</a></li>
+                    <li><a href="Hero.html">Hero</a></li>
+                    <li><a href="Bajaj.html">Bajaj</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="accesories.html">Accessories</a>
+              </li>
+              <li class="dropdown">
+                <a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="partnerships.html">Partnership</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+
+            <li class="dropdown">
+                <a href="#">Login</a>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="re-motorcycles">
+        <h2 style="color: white; margin-left: 20px">Our Partners</h2>
+        <button class="control-button" onclick="showSlide(1)">JS Films</button>
+        <button class="control-button" onclick="showSlide(2)">Rider Girl Vishakha</button>
+        <button class="control-button" onclick="showSlide(3)">Power Drift</button>
+        <button class="control-button" onclick="showSlide(4)">Born to Ride</button>
+    </div>
+    <!--slideshow images-->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="Partnerships/Partner_Image_JS_Films.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Partnerships/ridergirl.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Partnerships/powerdrift.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Partnerships/born to ride.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+
+            function showSlide(slideNumber) {
+                showSlides(slideNumber);
+            }
+
+            // Updated showSlide function to link buttons to images
+            function showSlide(slideNumber) {
+                currentSlide(slideNumber);
+            }
+        </script>
+
+        <div class="royal-enfield">
+            <h1 style="left: auto;">MORE INFORMATION BELOW</h1>
+
+            <div class="faq">
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">JS FILMS</div>
+                        <div class="faq-answer">JS Films, also known as Jasminder Singh, is a prominent YouTuber in the
+                            bike enthusiast community. With a strong passion for motorcycles, JS Films has cultivated a
+                            dedicated following by producing captivating and informative content about various
+                            two-wheeled machines. His YouTube channel is a treasure trove of high-quality motorcycle
+                            reviews, thrilling rides, and insightful tips for both seasoned riders and newcomers to the
+                            world of motorcycling. JS Films' charismatic on-screen presence and in-depth knowledge of
+                            bikes have made him a respected figure in the industry, earning him a substantial subscriber
+                            base. Not only does he provide detailed reviews of the latest models and accessories, but he
+                            also takes viewers on exhilarating rides, sharing his adventures and experiences on the open
+                            road. JS Films' engaging videos and commitment to the biking community have solidified his
+                            status as a go-to source for all things related to motorcycles, making him a beloved figure
+                            among bike enthusiasts and a key influencer in the YouTube bike vlogging space.<br>
+                            <p><a href="https://www.youtube.com/@jsfilmsindia">JS Films Youtube Channel</a></p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">RIDER GIRL VISHAKHA</div>
+                        <div class="faq-answer">RiderGirl Vishakha, also known as Vishakha Fulsunge, is a prominent
+                            figure in the Indian motorbike YouTube community. Her channel is renowned for breaking
+                            stereotypes in a male-dominated industry, as she passionately shares her biking adventures
+                            and experiences as a female rider. Vishakha's content ranges from in-depth motorcycle
+                            reviews to thrilling ride vlogs, and her engaging personality has earned her a significant
+                            following. She empowers and inspires women to pursue their love for biking and challenges
+                            societal norms, making her a trailblazer in the Indian bike YouTube scene.<br>
+                            <p><a href="https://www.youtube.com/@RiderGirlVishakha">Rider Girl Vishakha Youtube
+                                    Channel</a></p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">XBHP</div>
+                        <div class="faq-answer">xBhp was founded as a single web page in 2001. Soon it grew to be a
+                            thriving online and offline community of India. It is still the largest and most popular
+                            motorcycling platform where people from all over the nation come and share their experiences
+                            and make like minded friends. Today besides an online forum and offline community it is also
+                            a portal, social media and a national print magazine by the same name. <br>
+                            <p><a href="https://www.youtube.com/@RiderGirlVishakha">XBHP Youtube Channel</a></p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">BORN TO RIDE</div>
+                        <div class="faq-answer">Btrlakshay, a prominent Indian motorbike YouTuber, has taken the online
+                            two-wheeler community by storm with his passion for motorcycles and his engaging content.
+                            Born and raised in India, he has a deep-rooted love for bikes that shines through in his
+                            videos. With over a decade of riding experience, Btrlakshay has become a trusted source of
+                            information for motorcycle enthusiasts and a revered figure in the Indian motorcycling
+                            world.
+                            What sets Btrlakshay apart is his genuine enthusiasm for all things related to motorcycles.
+                            Whether he's reviewing the latest models, providing maintenance tips, or sharing his riding
+                            adventures, his dedication to the two-wheeled world is evident in every video. He's not just
+                            a reviewer; he's a storyteller, bringing his audience along on his journeys through vivid
+                            narration and breathtaking cinematography.<br>
+                            <p><a href="https://www.youtube.com/@Btrlakshay">Born To Ride Youtube Channel</a></p></div>
+                    </div>
+                </div>
+                <script>
+                    const faqItems = document.querySelectorAll('.faq-item');
+
+                    faqItems.forEach(item => {
+                        const question = item.querySelector('.faq-question');
+
+                        question.addEventListener('click', () => {
+                            item.classList.toggle('open');
+                        });
+                    });
+                </script>
+                <hr />
+                <!--footer -->
+                <div class="footer">
+                    <div class="footer-section">
+                        <h2>Why Choose Us?
+                        </h2>
+                        <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and
+                            esteemed
+                            bike
+                            dealers, simplifying the process of acquiring a new bike. With an extensive range of bike
+                            choices
+                            and
+                            personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping
+                            experience.
+                            <br>The
+                            platform's user-friendly interface provides comprehensive details, expert insights, and
+                            secure
+                            transactions.
+                        </p>
+                    </div>
+                    <div class="footer-section">
+                        <h2>Quick Links</h2>
+                        <ul class="footer-list">
+                            <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+                            <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+                            <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+                            <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+                            <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+                            <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+                            <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+                            <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h2>Contact Us</h2>
+                        <ul class="footer-list">
+                            <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+                            <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <hr style="color: white;">
+                <p style="color: white;" style="font-size: smaller;">@Ride-O-Holic. T&C applied. Made By Kunj, Naman,
+                    Snigdh,
+                    Varenyam</p>
+
+
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bajaj</title>
+    <link rel="stylesheet" href="Bajaj.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!--navigation bar-->
+    <nav class="navigation-bar">
+        <div class="company-name">
+            <h2>Ride-O-Holic</h2>
+        </div>
+        <ul class="nav-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+        <a href="#">Bikes</a>
+        <ul class="dropdown-content">
+          <li><a href="royalenfeild.html">Royal Enfeild</a></li>
+          <li><a href="TVS.html">TVS</a></li>
+          <li><a href="yamaha.html">Yamaha</a></li>
+          <li><a href="Hero.html">Hero</a></li>
+          <li><a href="Bajaj.html">Bajaj</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="accesories.html">Accessories</a>
+      </li>
+      <li class="dropdown">
+        <a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="partnerships.html">Partnership</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+             
+            <li class="dropdown">
+                <a href="#">Login</a>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="re-motorcycles">
+        <h2 style="color: white;  margin-left: 20px">Motorcycles</h2>
+        <button class="control-button" onclick="showSlide(1)">Pulsar NS 160</button>
+        <button class="control-button" onclick="showSlide(2)">Dominar 400</button>
+        <button class="control-button" onclick="showSlide(3)">Pulsar 250</button>
+        <button class="control-button" onclick="showSlide(4)">Avenger 220 Street</button>
+        <button class="control-button" onclick="showSlide(5)">Platina 110</button>
+    </div>
+    <!--slideshow images-->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="assets/PULSAR_NS_160.jpg" style="width:100%">
+                <div class="text">
+                    <button class="explore-button" onclick="window.location.href = 'pulsarns.html';">Explore Pulsar NS 160</button>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/DOMINAR_400.jpg" style="width:100%">
+                <div class="text">
+                    <button class="explore-button" onclick="window.location.href = 'dominar.html';">Explore Dominar 400</button>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/PULSAR_250.jpg" style="width:100%">
+                <div class="text">
+                    <button class="explore-button" onclick="window.location.href = 'pulsar250.html';">Explore Pulsar 250</button>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/AVENGER_STREET_220.jpg" style="width:100%">
+                <div class="text">
+                    <button class="explore-button" onclick="window.location.href = 'avenger.html';">Explore Avenger 220 Street</button>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/PLATINA_110.jpg" style="width:100%">
+                <div class="text">
+                    <button class="explore-button" onclick="window.location.href = 'platina.html';">Explore Platina 110</button>
+                </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+
+            function showSlide(slideNumber) {
+                showSlides(slideNumber);
+            }
+
+            // Updated showSlide function to link buttons to images
+            function showSlide(slideNumber) {
+                currentSlide(slideNumber);
+            }
+        </script>
+
+        <div class="royal-enfield">
+            <h1 style="left: auto;">Bajaj</h1>
+            <p>Bajaj Auto Limited is a prominent Indian motorcycle manufacturer headquartered in Pune, India. Founded in
+                1945, the company has evolved into one of the largest and most influential players in the global
+                motorcycle market. Bajaj is known for its diverse range of motorcycles, catering to various segments
+                including commuter bikes, sport bikes, and cruisers.</p>
+            <p>With a reputation for innovation, Bajaj has introduced several landmark models in the Indian market,
+                often setting trends in design and technology. The company is also recognized for its partnership with
+                international brands like KTM and Triumph, which has led to the development of high-performance
+                motorcycles.</p>
+            <p>Bajaj has a strong focus on exports and its motorcycles are sold in numerous countries around the world.
+                The brand's commitment to quality, affordability, and fuel efficiency has contributed to its success in
+                both domestic and international markets, making Bajaj Auto a significant contributor to India's
+                automotive industry.</p>
+        </div>
+         <div class="re-buttons">
+            <div class="icon-button" onclick="window.location.href='bookatestride.html';">
+                <i class="fa fa-motorcycle"></i>
+                <span>Book a Ride</span>
+            </div>
+            <div class="icon-button" onclick="window.location.href='bookaservice.html';">
+                <a> <i class="fa fa-gears"></i>
+                    <span>Book a Service</span></a>
+
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="faq-container">
+                <h2>FREQUENTLY ASKED QUESTIONS</h2>
+                <div class="faq-item">
+                    <div class="faq-question">What is Bajaj Auto Limited and what is its primary business?</div>
+                    <div class="faq-answer">Bajaj Auto Limited is one of India's leading manufacturers of two-wheelers
+                        and three-wheelers. The company specializes in producing motorcycles, scooters, and
+                        auto-rickshaws. They are known for their diverse range of products catering to different
+                        segments of the market.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Where are Bajaj Auto's manufacturing facilities located?</div>
+                    <div class="faq-answer">Bajaj Auto has several manufacturing facilities in India. Key locations
+                        include Chakan (Pune), Waluj (Aurangabad), and Pantnagar (Uttarakhand). Additionally, Bajaj Auto
+                        has expanded its global presence with manufacturing units in countries like Indonesia and
+                        Mexico.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What are some of the popular Bajaj motorcycle models?</div>
+                    <div class="faq-answer">Bajaj offers a variety of motorcycle models, some of which have gained
+                        popularity both in India and internationally. These include the Bajaj Pulsar, Bajaj Dominar,
+                        Bajaj Avenger, Bajaj Platina, and the Bajaj CT and Bajaj Discover series.</div>
+                </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Is Bajaj Auto involved in any corporate social responsibility (CSR)
+                            initiatives?</div>
+                        <div class="faq-answer">Yes, Bajaj Auto is actively engaged in CSR initiatives. The company
+                            focuses on areas such as education, healthcare, and community development. Their CSR efforts
+                            are directed through the Bajaj Foundation, which works on several social and community
+                            welfare programs, contributing to the betterment of the underprivileged sections of society.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                const faqItems = document.querySelectorAll('.faq-item');
+
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question');
+
+                    question.addEventListener('click', () => {
+                        item.classList.toggle('open');
+                    });
+                });
+            </script>
+            <hr />
+            <!--footer -->
+            <div class="footer">
+                <div class="footer-section">
+                    <h2>Why Choose Us?
+                    </h2>
+                    <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and
+                        esteemed
+                        bike
+                        dealers, simplifying the process of acquiring a new bike. With an extensive range of bike
+                        choices
+                        and
+                        personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping
+                        experience.
+                        <br>The
+                        platform's user-friendly interface provides comprehensive details, expert insights, and secure
+                        transactions.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h2>Quick Links</h2>
+                    <ul class="footer-list">
+                        <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+                        <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+                        <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+                        <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+                        <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+                        <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+                        <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+                        <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h2>Contact Us</h2>
+                    <ul class="footer-list">
+                        <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+                        <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <hr style="color: white;">
+            <p style="color: white;" style="font-size: smaller;">@Ride-O-Holic. T&C applied. Made By Kunj, Naman,
+                Snigdh,
+                Varenyam</p>
+
+
+</body>
+
+</html>

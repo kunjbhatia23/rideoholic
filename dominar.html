@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominar 400</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="dominar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navigation-bar">
+        <div class="company-name">
+            <h2>Ride-O-Holic</h2>
+        </div>
+        <ul class="nav-buttons">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+        <a href="#">Bikes</a>
+        <ul class="dropdown-content">
+          <li><a href="royalenfeild.html">Royal Enfeild</a></li>
+          <li><a href="TVS.html">TVS</a></li>
+          <li><a href="yamaha.html">Yamaha</a></li>
+          <li><a href="Hero.html">Hero</a></li>
+          <li><a href="Bajaj.html">Bajaj</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="accesories.html">Accessories</a>
+    </li>
+    <li class="dropdown">
+        <a href="accesories.html">Accessories</a>
+      </li>
+      <li class="dropdown">
+        <a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="partnerships.html">Partnership</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+             
+            <li class="dropdown">
+                <a href="#">Login</a>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="window.location.href = 'customerlogin.html';">Customer Login</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="heading-container">
+        <h2>MOTORCYCLES > <span class="classic-heading">Dominar 400</span></h2>
+    </div>
+
+    <div class="container">
+        <div class="single-product">
+            <div class="row">
+                <div class="col-6">
+                    <div class="product-image">
+                        <div class="product-image-main">
+                            <img src="  2019-Bajaj-Dominar-400-Launch-Ride-Review-150441.webp" alt=""
+                                id="product-main-image">
+                        </div>
+                        <div class="product-image-slider">
+                            <img src="  2019-Bajaj-Dominar-400-Launch-Ride-Review-150441.webp" alt="" class="image-list">
+                            <img src="  bajaj-select-model-aurora-green-1669289011797.webp" alt=""
+                                class="image-list">
+                            <img src="  bajaj-select-model-charcoal-black-1669289018001.webp" alt=""
+                                class="image-list">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="product">
+                        <div class="product-title">
+                            <h2>Bajaj Dominar 400</h2>
+                        </div>
+                        <div class="product-rating">
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span class="review">( 56 Reviews )</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="offer-price">₹ 2,76,094</span>
+                            <span class="sale-price">On-Road Price</span>
+                        </div>
+
+                        <div class="product-details">
+                            <h3>Description</h3>
+                            <p>The Bajaj Dominar 400 is a sport-touring motorcycle designed to offer a versatile and
+                                exciting riding experience. It's powered by a robust 373.3cc liquid-cooled,
+                                single-cylinder engine, known for its ample low-end torque and smooth power delivery.
+                                With its distinctive and muscular design, the Dominar 400 has a strong road presence.
+
+                                This bike features modern components such as full LED lighting, a digital instrument
+                                cluster, and a twin-barrel exhaust, adding to its contemporary appeal. Its comfortable
+                                riding position, ergonomic seating, and a strong perimeter frame make it well-suited for
+                                long journeys and city commutes.
+
+                                Whether you're exploring highways or tackling city traffic, the Bajaj Dominar 400 offers
+                                a blend of performance, comfort, and style, making it a popular choice for riders
+                                looking for a versatile sport-touring motorcycle.</p>
+                        </div>
+
+                        <div class="product-color">
+                            <h4>Color</h4>
+                            <div class="color-layout">
+                                <div class="color-layout">
+                                    <input type="radio" id="blue" name="color" value="blue" class="color-input"
+                                        onclick="changeMainImage('blue')">
+                                    <label for="blue" class="blue"></label>
+
+                                    <input type="radio" id="white" name="color" value="white" class="color-input"
+                                        onclick="changeMainImage('white')">
+                                    <label for="white" class="white"></label>
+                               </div>
+                            </div>
+                        </div>
+
+                        <span class="divider"></span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Script -->
+    <script>
+        const sliderMainImage = document.getElementById("product-main-image"); // product container image
+        const sliderImageList = document.getElementsByClassName("image-list"); // image thumbnail group selection
+        const colorInputs = document.getElementsByClassName("color-input"); // color input buttons
+
+        for (let i = 0; i < sliderImageList.length; i++) {
+            sliderImageList[i].onclick = function () {
+                sliderMainImage.src = sliderImageList[i].src;
+                console.log(sliderMainImage.src);
+            };
+        }
+
+        for (let i = 0; i < colorInputs.length; i++) {
+            colorInputs[i].onclick = function () {
+                const color = colorInputs[i].value;
+                switch (color) {
+                    case "blue":
+                        sliderMainImage.src = "  bajaj-select-model-aurora-green-1669289011797.webp";
+                        console.log(sliderMainImage.src);
+                        break;
+                    case "white":
+                        sliderMainImage.src = "  bajaj-select-model-charcoal-black-1669289018001.webp";
+                        console.log(sliderMainImage.src);
+                        break;
+                    default:
+                        break;
+                }
+            };
+        }
+    </script>
+    <style>
+        table {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        table,
+        th,
+        td {
+            border: 3px solid white;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            text-align: center;
+            background-color: rgb(30, 30, 30);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: black;
+        }
+    </style>
+    </head>
+
+    <body>
+
+         <div class="re-buttons">
+            <div class="icon-button" onclick="window.location.href='bookatestride.html';">
+                <i class="fa fa-motorcycle"></i>
+                <span>Book a Ride</span>
+            </div>
+            <div class="icon-button" onclick="window.location.href='bookaservice.html';">
+                <a> <i class="fa fa-gears"></i>
+                    <span>Book a Service</span></a>
+
+            </div>
+        </div>
+
+        <h2 style="text-align: center;">Dominar 400 Key Highlights</h2><br>
+
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Specification</th>
+            </tr>
+            <tr>
+                <td>Engine Capacity</td>
+                <td>373.3 cc</td>
+            </tr>
+            <tr>
+                <td>Mileage - ARAI</td>
+                <td>30 kmpl</td>
+            </tr>
+            <tr>
+                <td>Transmission</td>
+                <td>6 Speed Manual</td>
+            </tr>
+            <tr>
+                <td>Kerb Weight</td>
+                <td>193 kg</td>
+            </tr>
+            <tr>
+                <td>Fuel Tank Capacity</td>
+                <td>13 litres</td>
+            </tr>
+            <tr>
+                <td>Seat Height</td>
+                <td>800 mm</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            p {
+                text-align: left;
+            }
+        </style>
+        </head>
+
+        <h2 style="text-align: left;">Bajaj Dominar 400 Summary</h2>
+        <br>
+        <br>
+
+        <p>Bajaj Dominar 400 is a street bike available in only 1 variant and 2 colours. Dominar 400 price starts at Rs.
+            2,76,094 in India. The Bajaj Dominar 400 is powered by 373.3cc BS6 engine which develops a power of 39.42
+            bhp and a torque of 35 Nm. With both front and rear disc brakes, Bajaj Dominar 400 comes up with
+            anti-locking braking system. This Dominar 400 bike weighs 193 kg and has a fuel tank capacity of 13 liters.<br><br>
+
+            The Bajaj Dominar 400 offers the best value proposition at its price point, but improvements can always be
+            made to a product. Keeping that in mind, Bajaj had gone ahead while updating the Dominar which had received
+            a host of upgrades in 2019, that makes it a better product.<br><br>
+
+            The motorcycle continued with the same design but received a few subtle updates in 2019 which give it a
+            fresh appeal. It is available with the choice of two colour schemes- Aurora Green and Vine Black. In terms
+            of equipment, it features a data-extensive instrument console providing host information to the rider along
+            with a secondary display on the fuel tank.<br><br>
+
+            It also gets premium-looking side mirrors, forged side stand and a double-barrel exhaust. In order to
+            maximise the touring abilities, the 2019 Dominar comes with straps located beneath the pillion seat that can
+            be used to mount luggage using bungee cords.<br><br>
+
+            Coming to the mechanical upgrades, the motorcycle now features inverted front forks borrowed from the KTM
+            range. And with that, it also gets a radial caliper for the braking system up front. The rear continues to
+            sport a monoshock and a single disc for braking. Dual-channel ABS is standard.<br><br>
+
+            Next is the motor. It’s the same 373.2cc liquid-cooled, single-cylinder, fuel-injected mill that comes with
+            a DOHC configuration. This has allowed Bajaj to extract more power from the engine which now produces
+            39.4bhp of max power at 8650rpm and 35Nm of peak torque at 7000rpm. The kerb weight of the bike stands at
+            187kgs.<br><br>
+
+            In its price segment, the Bajaj Dominar 400 competes against the Royal Enfield Himalayan, KTM 250 Duke and
+            Suzuki Gixxer 250.</p>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!--footer -->
+        <div class="footer">
+            <div class="footer-section">
+                <h2>Why Choose Us?</h2>
+                <p>Ride-O-Holic is a groundbreaking online platform that bridges the gap between customers and esteemed
+                    bike
+                    dealers, simplifying the process of acquiring a new bike. With an extensive range of bike choices
+                    and
+                    personalized suggestions, Ride-O-Holic ensures an individualized and enjoyable shopping experience.
+                    <br>The
+                    platform's user-friendly interface provides comprehensive details, expert insights, and secure
+                    transactions.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a href="royalenfeild.html">Royal Enfeild</a></li>
+                    <li class="footer-list-item"><a href="TVS.html">TVS</a></li>
+                    <li class="footer-list-item"><a href="yamaha.html">Yamaha</a></li>
+                    <li class="footer-list-item"><a href="Hero.html">Hero</a></li>
+                    <li class="footer-list-item"><a href="Bajaj.html">Bajaj</a></li>
+                    <li class="footer-list-item"><a href="#">Bike Wash</a></li>
+                    <li class="footer-list-item"><a href="#">Foam Wash</a></li>
+                    <li class="footer-list-item"><a href="#">Service Center</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Contact Us</h2>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-facebook "></i></a></li>
+                    <li class="footer-list-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <hr style="color: white;">
+        <p style="color: white;" style="font-size: xx-small">@Ride-O-Holic. T&C applied. Made By Kunj, Naman, Snigdh,
+            Varenyam</p>
+
+
+    </body>
+
+</html>

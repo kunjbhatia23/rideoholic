@@ -1,0 +1,354 @@
+body {
+    font-family: 'poppins', sans-serif;
+    background-color:black;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-bar {
+    background-color: black;
+    color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 2%;
+    height: 75px;
+
+}
+
+.company-name {
+    font-family: Lucida Bright;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.nav-buttons {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: tahoma;
+}
+
+.nav-buttons li {
+    margin: 0 10px;
+}
+
+.nav-buttons li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.nav-buttons li a:hover {
+    background-color: red;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    z-index: 1;
+}
+
+.dropdown-content li {
+    margin: 5px 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-buttons li.dropdown ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+* {
+    box-sizing: border-box
+}
+
+.re-motorcycles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.motorcycles-heading {
+    margin-right: 20px;
+}
+
+.control-button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: large;
+}
+
+.control-button:hover {
+    background-color: red;
+}
+
+.explore-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.explore-button:hover {
+    background-color: red;
+    transform: scale(1.1);
+}
+/*slideshow css*/
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1920px;
+    position: relative;
+    margin: auto;
+    z-index: 0;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 0px;
+    width: 0px;
+    margin: 0 0px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.royal-enfield {
+    background-color: black;
+    padding: 20px;
+    color: white;
+    text-align: left;
+}
+
+.royal-enfield h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.royal-enfield p {
+    font-size: 1rem;
+    text-align: left;
+}
+.re-buttons {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon-buttons-container {
+    display: flex; /* Display the buttons in a row */
+    justify-content: center; /* Horizontally center the buttons within the container */
+  }
+
+  .icon-button {
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+
+  .icon-button:hover {
+    background-color: red;
+  }
+
+  .icon-button i {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+
+  .icon-button span {
+    font-size: 25px;
+  }
+  /*footer css*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, calc(33.33% - 20px));
+    /* Decreased width */
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+
+.footer-section {
+    padding: 5px;
+}
+
+.footer-section h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+.footer-section p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list-item {
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.footer-list-item a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    /* Added transition */
+}
+
+.footer-list-item a:hover {
+    background-color: red;
+}
+
+.faq{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    align-content: left;
+  }
+/*faq css*/
+  .faq-container {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .faq-item {
+    border-bottom: 1px solid #333; /* Darker line color */
+    padding: 15px 0;
+  }
+
+  .faq-question {
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .faq-answer {
+    display: none;
+    margin-top: 10px;
+  }
+
+  .faq-item.open .faq-answer {
+    display: block;
+  }
