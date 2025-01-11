@@ -1,6 +1,3 @@
-Motorcycle Reservation System Website (Ride-o-holic) - 
-Ride-O-Holic which is a groundbreaking online platform that bridges the gap between 
-customers and esteemed bike dealers, simplifying the process of acquiring a new bike. 
-With an extensive range of bike choices and personalized suggestions, Ride-O-Holic 
-ensures an individualized and enjoyable shopping experience. The platform's user-friendly 
-interface provides comprehensive details, expert insights, and secure transactions.
+Ride-O-Holic is an innovative online platform connecting customers with top bike dealers, 
+streamlining the bike-buying process. Offering a wide range of options and personalized recommendations,
+it ensures a smooth and enjoyable shopping experience with expert insights and secure transactions.
