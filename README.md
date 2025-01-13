@@ -1,3 +1,4 @@
-Ride-O-Holic is an innovative online platform connecting customers with top bike dealers, 
-streamlining the bike-buying process. Offering a wide range of options and personalized recommendations,
-it ensures a smooth and enjoyable shopping experience with expert insights and secure transactions.
+Ride-O-Holic is a cutting-edge online platform that bridges the gap between customers and 
+leading bike dealers, simplifying the bike-buying journey. With an extensive selection of bikes 
+and tailored recommendations, it delivers a seamless and enjoyable shopping experience, supported 
+by expert advice and secure transactions.
